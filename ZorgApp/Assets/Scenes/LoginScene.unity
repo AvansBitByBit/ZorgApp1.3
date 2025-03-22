@@ -179,6 +179,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0eb12f104f777e4fb0e1fdfd7fd975b, type: 3}
+--- !u!114 &88596851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 457316111931516638, guid: f0eb12f104f777e4fb0e1fdfd7fd975b, type: 3}
+  m_PrefabInstance: {fileID: 88596850}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed4f7f0e67c302469248224d4bac5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &153402537
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,6 +3568,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1158212796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158212798}
+  - component: {fileID: 1158212797}
+  m_Layer: 0
+  m_Name: Accountsettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1158212797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158212796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c308efa652e09b440808cd1bb016976a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailInputField: {fileID: 153402539}
+  passwordInputField: {fileID: 1848755378}
+  birthDateInputField: {fileID: 370495285}
+  NameInputField: {fileID: 1189283154}
+  loginButton: {fileID: 949206265}
+  userApiClient: {fileID: 88596851}
+--- !u!4 &1158212798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158212796}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -395.9116, y: 774.4388, z: -8.532041}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1172854383
 GameObject:
   m_ObjectHideFlags: 0
@@ -6637,3 +6698,4 @@ SceneRoots:
   - {fileID: 1238968173}
   - {fileID: 831169431}
   - {fileID: 711328336}
+  - {fileID: 1158212798}
