@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      redArm_long_0: 8399483261570943257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

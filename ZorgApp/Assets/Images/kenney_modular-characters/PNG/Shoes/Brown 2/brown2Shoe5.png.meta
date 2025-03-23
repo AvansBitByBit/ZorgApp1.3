@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      brown2Shoe5_0: -8675334076547663987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

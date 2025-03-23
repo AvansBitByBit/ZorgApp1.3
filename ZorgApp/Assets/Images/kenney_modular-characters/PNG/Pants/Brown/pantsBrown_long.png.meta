@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pantsBrown_long_0: 4819685799189850350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pantsNavy1_0: -5725188001064581043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

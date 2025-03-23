@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blondeBrow2_0: -8686534706715288753
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

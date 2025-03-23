@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tint2_hand_0: 3650216882250480844
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      navyShirt8_0: 1247167322615788528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

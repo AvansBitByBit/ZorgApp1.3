@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      greyWoman3_0: 4351246646237013393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

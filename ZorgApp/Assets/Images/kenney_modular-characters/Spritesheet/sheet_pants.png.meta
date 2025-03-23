@@ -797,7 +797,34 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sheet_pants_0: 6063638968217336737
+      sheet_pants_1: 2460896589692401627
+      sheet_pants_10: 3462546085228272336
+      sheet_pants_11: 1216722764898301898
+      sheet_pants_12: 4007240533438469837
+      sheet_pants_13: 5762826489398063712
+      sheet_pants_14: -2378446875407068143
+      sheet_pants_15: -4540272007478231914
+      sheet_pants_16: 8080161493171614897
+      sheet_pants_17: 9089264678747791890
+      sheet_pants_18: -5984593765169558053
+      sheet_pants_19: 3060094201677013022
+      sheet_pants_2: 8297025187341904624
+      sheet_pants_20: -1808029923709195513
+      sheet_pants_21: -541534811383486129
+      sheet_pants_22: -5741412673532207459
+      sheet_pants_23: -6183624823948445309
+      sheet_pants_24: 3152554800840496641
+      sheet_pants_25: 1326708830816606800
+      sheet_pants_26: -5788283150876597199
+      sheet_pants_3: 9185593591147950217
+      sheet_pants_4: -3628428454403928070
+      sheet_pants_5: 6147868211293537467
+      sheet_pants_6: -1305031636764410737
+      sheet_pants_7: -896308041605627629
+      sheet_pants_8: 276305178677248497
+      sheet_pants_9: -2418070961101943098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

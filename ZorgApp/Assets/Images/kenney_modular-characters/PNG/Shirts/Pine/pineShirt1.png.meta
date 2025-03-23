@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pineShirt1_0: 3798973002743438965
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

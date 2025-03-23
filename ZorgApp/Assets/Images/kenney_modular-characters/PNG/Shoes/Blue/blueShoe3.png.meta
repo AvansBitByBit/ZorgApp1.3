@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blueShoe3_0: 81367445953639951
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

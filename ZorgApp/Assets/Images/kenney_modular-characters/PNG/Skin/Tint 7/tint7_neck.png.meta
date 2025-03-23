@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tint7_neck_0: 2673255272818911349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
