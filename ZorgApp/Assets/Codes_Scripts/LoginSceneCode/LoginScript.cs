@@ -6,10 +6,9 @@ public class LoginScript : MonoBehaviour
 {
     public TMP_InputField emailInputField;
     public TMP_InputField passwordInputField;
-    public TMP_InputField birthDateInputField;
-    public TMP_InputField NameInputField;
     public Button loginButton;
     public UserApiClient userApiClient;
+    public Button GaVerderButton;
 
     void Start()
     {
@@ -27,6 +26,8 @@ public class LoginScript : MonoBehaviour
         if (response is WebRequestData<string> data)
         {
             Debug.Log("Login successful, token: " + data.Data);
+            GaVerderButton.GetComponentInChildren<TMP_Text>().text = "Ga ingelogd verder";
+
         }
         else
         {
