@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class WebClient : MonoBehaviour
 {
@@ -22,6 +23,19 @@ public class WebClient : MonoBehaviour
         else
         {
             Debug.LogWarning("⚠️ No token found in PlayerPrefs.");
+        }
+    }
+    public void CheckToken()
+    {
+        token = PlayerPrefs.GetString("access_token", null);
+        if (string.IsNullOrEmpty(token))
+        {
+            Debug.LogWarning("⚠️ No token found in PlayerPrefs. Redirecting to login page.");
+            SceneManager.LoadScene("LoginScene");
+        }
+        else
+        {
+            Debug.Log("✅ Token loaded from PlayerPrefs: " + token);
         }
     }
 
