@@ -24,6 +24,7 @@ public class AddLogToDagboek : MonoBehaviour
         {
             Title = title,
             Contents = contents,
+            Date = DateTime.Now.ToString("yyyy-MM-dd"),
             UserId = "currentUserId" // Replace with the actual user ID
         };
 
