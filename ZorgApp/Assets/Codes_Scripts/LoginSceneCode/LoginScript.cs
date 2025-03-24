@@ -9,6 +9,8 @@ public class LoginScript : MonoBehaviour
     public Button loginButton;
     public UserApiClient userApiClient;
     public Button GaVerderButton;
+    public WebClient webClient;
+
 
     void Start()
     {
@@ -26,6 +28,9 @@ public class LoginScript : MonoBehaviour
         if (response is WebRequestData<string> data)
         {
             Debug.Log("Login successful, token: " + data.Data);
+            string token = data.Data;
+            webClient.SetToken(token);
+            Debug.Log("🔑 Token set after login: " + token);
             GaVerderButton.GetComponentInChildren<TMP_Text>().text = "Ga ingelogd verder";
 
         }

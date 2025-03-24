@@ -30,7 +30,15 @@ public class WebClient : MonoBehaviour
         this.token = token;
         PlayerPrefs.SetString("access_token", token);
         PlayerPrefs.Save();
+        Debug.Log("🔑 Token saved to PlayerPrefs." + token);
         
+    }
+
+    public void ClearToken()
+    {
+        token = null;
+        PlayerPrefs.DeleteKey("access_token");
+        PlayerPrefs.Save();
     }
 
     public async Awaitable<IWebRequestReponse> SendGetRequest(string route)
@@ -75,14 +83,15 @@ public class WebClient : MonoBehaviour
     private async Awaitable<IWebRequestReponse> SendWebRequest(UnityWebRequest webRequest)
     {
         await webRequest.SendWebRequest();
-
-        switch (webRequest.result)
+        if (webRequest.result == UnityWebRequest.Result.Success)
         {
-            case UnityWebRequest.Result.Success:
-                string responseData = webRequest.downloadHandler.text;
-                return new WebRequestData<string>(responseData);
-            default:
-                return new WebRequestError(webRequest.error);
+            string responseData = webRequest.downloadHandler.text;
+            return new WebRequestData<string>(responseData);
+        }
+        else
+        {
+            Debug.LogError($"WebRequestError: {webRequest.error}, Response Code: {webRequest.responseCode}, URL: {webRequest.url}");
+            return new WebRequestError(webRequest.error);
         }
     }
  
