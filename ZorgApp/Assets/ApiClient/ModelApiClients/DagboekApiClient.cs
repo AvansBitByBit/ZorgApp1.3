@@ -1,37 +1,43 @@
 using System;
-using System.Collections.Generic;
-using System.Net;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class DagboekApiClient : MonoBehaviour
 {
     public WebClient webClient;
 
-    public async Awaitable<IWebRequestReponse> PushDagboek(Dagboek dagboek)
+    public async Task<IWebRequestReponse> PushDagboek(Dagboek dagboek)
     {
-        string route = "/dagboek";
+        string route = "/Dagboek";
         string data = JsonUtility.ToJson(dagboek);
 
-        return await webClient.SendPostRequest(route, data);
+        IWebRequestReponse response = await webClient.SendPostRequest(route, data);
+
+        if (response is WebRequestError error)
+        {
+            Debug.LogError($"Failed to push Dagboek entry:");
+        }
+
+        return response;
     }
 
-    public async Awaitable<IWebRequestReponse> FetchAllDagboeken()
+    public async Task<IWebRequestReponse> FetchAllDagboeken()
     {
-        string route = "/dagboek";
+        string route = "/Dagboek";
         return await webClient.SendGetRequest(route);
     }
 
-    public async Awaitable<IWebRequestReponse> UpdateDagboek(Dagboek dagboek)
+    public async Task<IWebRequestReponse> UpdateDagboek(Dagboek dagboek)
     {
-        string route = $"/dagboek/{dagboek.ID}";
+        string route = $"/Dagboek/{dagboek.ID}";
         string data = JsonUtility.ToJson(dagboek);
 
         return await webClient.SendPutRequest(route, data);
     }
 
-    public async Awaitable<IWebRequestReponse> DeleteDagboek(int dagboekId)
+    public async Task<IWebRequestReponse> DeleteDagboek(int dagboekId)
     {
-        string route = $"/dagboek/{dagboekId}";
+        string route = $"/Dagboek/{dagboekId}";
         return await webClient.SendDeleteRequest(route);
     }
 }
