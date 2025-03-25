@@ -1,0 +1,13 @@
+using UnityEngine;
+using System;
+
+[Serializable]
+public class Afspraak
+{
+    public int ID;
+    public string Titel;
+    public string NaamDokter;
+    public string DatumTijd;
+    public string UserId;
+    public int Actief;
+}
