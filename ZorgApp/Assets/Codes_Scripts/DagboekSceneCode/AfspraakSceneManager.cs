@@ -17,14 +17,22 @@ public class AfspraakSceneManager : MonoBehaviour
     public Button Afspraak4;
     public Button Afspraak5;
     public Button Afspraak6;
+    public GameObject notitiepaneel, afspraakpaneel;
+    public Button notitieknop;
 
     void Start()
     {
         refreshButton.onClick.AddListener(LoadAfspraken);
         deleteButton.onClick.AddListener(DeleteSelectedAfspraak);
         deleteAllButton.onClick.AddListener(DeleteAllAfspraken); // Add listener for deleteAllButton
+        notitieknop.onClick.AddListener(HideAfsrpaakpaneel);
 
         LoadAfspraken();
+    }
+
+    public void HideAfsrpaakpaneel()
+    {
+        afspraakpaneel.SetActive(false);
     }
 
     public async void LoadAfspraken()
