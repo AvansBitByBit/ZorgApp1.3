@@ -646,7 +646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &234957227
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5904,6 +5904,13 @@ MonoBehaviour:
   - {fileID: 1013858036}
   deleteButton: {fileID: 1038416151}
   refreshButton: {fileID: 2052742742}
+  deleteAllButton: {fileID: 1038416151}
+  Afspraak1: {fileID: 2094592365}
+  Afspraak2: {fileID: 53314574}
+  Afspraak3: {fileID: 1258840315}
+  Afspraak4: {fileID: 2073190261}
+  Afspraak5: {fileID: 1798769727}
+  Afspraak6: {fileID: 1530697940}
 --- !u!4 &1088785658
 Transform:
   m_ObjectHideFlags: 0
@@ -9144,7 +9151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1876383022
 RectTransform:
   m_ObjectHideFlags: 0

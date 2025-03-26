@@ -11,6 +11,12 @@ public class AfspraakSceneManager : MonoBehaviour
     public Button deleteButton, refreshButton, deleteAllButton; // Add deleteAllButton
     private int selectedAfspraakId;
     private string selectedAfspraakTitle;
+    public Button Afspraak1;
+    public Button Afspraak2;
+    public Button Afspraak3;
+    public Button Afspraak4;
+    public Button Afspraak5;
+    public Button Afspraak6;
 
     void Start()
     {
@@ -75,69 +81,70 @@ public class AfspraakSceneManager : MonoBehaviour
         }
     }
 
-    private void DisplayAfspraken(List<Afspraak> afspraken)
-    {
-        Debug.Log($"Displaying {afspraken.Count} appointments on {afspraakButtons.Length} buttons");
+ private void DisplayAfspraken(List<Afspraak> afspraken)
+{
+    Debug.Log($"Displaying {afspraken.Count} appointments on {afspraakButtons.Length} buttons");
 
-        // Clear all buttons first
-        for (int i = 0; i < afspraakButtons.Length; i++)
+    // Clear all buttons first
+    for (int i = 0; i < afspraakButtons.Length; i++)
+    {
+        TMP_Text buttonText = afspraakButtons[i].GetComponentInChildren<TMP_Text>();
+        if (buttonText != null)
         {
+            buttonText.text = "Leeg Afspraak";
+        }
+        else
+        {
+            Debug.LogError($"Button {i} does not have a TMP_Text component.");
+        }
+        afspraakButtons[i].onClick.RemoveAllListeners();
+        afspraakButtons[i].interactable = false;
+    }
+
+    // Display the appointments if available
+    if (afspraken.Count > 0)
+    {
+        for (int i = 0; i < Mathf.Min(afspraken.Count, afspraakButtons.Length); i++)
+        {
+            Afspraak afspraak = afspraken[i];
+            int afspraakId = afspraak.ID;
+            string afspraakTitle = afspraak.Titel;
+            string naamDokter = afspraak.NaamDokter;
+            string datumTijd = afspraak.DatumTijd;
+
+            Debug.Log($"Afspraak {i}: Titel={afspraakTitle}, NaamDokter={naamDokter}, DatumTijd={datumTijd}");
+
             TMP_Text buttonText = afspraakButtons[i].GetComponentInChildren<TMP_Text>();
             if (buttonText != null)
             {
-                buttonText.text = "Leeg Afspraak";
+                // Set button text with the title
+                buttonText.text = afspraakTitle;
+                Debug.Log($"Button {i} text set to: {buttonText.text}");
             }
             else
             {
                 Debug.LogError($"Button {i} does not have a TMP_Text component.");
             }
+
+            // Clear previous listeners to avoid duplicates
             afspraakButtons[i].onClick.RemoveAllListeners();
-            afspraakButtons[i].interactable = false;
-        }
 
-        // Display the first appointment if available
-        if (afspraken.Count > 0)
-        {
-            for (int i = 0; i < Mathf.Min(afspraken.Count, afspraakButtons.Length); i++)
-            {
-                Afspraak afspraak = afspraken[i];
-                int afspraakId = afspraak.ID;
-                string afspraakTitle = afspraak.Titel;
-                string naamDokter = afspraak.NaamDokter;
-                string datumTijd = afspraak.DatumTijd;
+            // Add new listener with captured values
+            afspraakButtons[i].onClick.AddListener(() => SelectAfspraak(afspraakId, afspraakTitle, naamDokter, datumTijd));
+            afspraakButtons[i].interactable = true;
 
-                Debug.Log($"Afspraak {i}: Titel={afspraakTitle}, NaamDokter={naamDokter}, DatumTijd={datumTijd}");
-
-                TMP_Text buttonText = afspraakButtons[i].GetComponentInChildren<TMP_Text>();
-                if (buttonText != null)
-                {
-                    // Set button text with more information
-                    buttonText.text = $"{afspraakTitle}\n{naamDokter}\n{datumTijd}";
-                    Debug.Log($"Button {i} text set to: {buttonText.text}");
-                }
-                else
-                {
-                    Debug.LogError($"Button {i} does not have a TMP_Text component.");
-                }
-
-                // Clear previous listeners to avoid duplicates
-                afspraakButtons[i].onClick.RemoveAllListeners();
-
-                // Add new listener with captured values
-                afspraakButtons[i].onClick.AddListener(() => SelectAfspraak(afspraakId, afspraakTitle));
-                afspraakButtons[i].interactable = true;
-
-                Debug.Log($"Set button {i} with appointment ID {afspraakId}: {afspraakTitle}");
-            }
+            Debug.Log($"Set button {i} with appointment ID {afspraakId}: {afspraakTitle}");
         }
     }
+}
 
-    private void SelectAfspraak(int afspraakId, string afspraakTitle)
-    {
-        selectedAfspraakId = afspraakId;
-        selectedAfspraakTitle = afspraakTitle;
-        feedbackText.text = $"✅ Geselecteerde afspraak: {afspraakTitle}";
-    }
+private void SelectAfspraak(int afspraakId, string afspraakTitle, string naamDokter, string datumTijd)
+{
+    selectedAfspraakId = afspraakId;
+    selectedAfspraakTitle = afspraakTitle;
+    feedbackText.text = $"✅ Geselecteerde afspraak:\nTitel: {afspraakTitle}\nNaam Dokter: {naamDokter}\nDatum en Tijd: {datumTijd}";
+}
+
 
     public async void DeleteSelectedAfspraak()
     {
