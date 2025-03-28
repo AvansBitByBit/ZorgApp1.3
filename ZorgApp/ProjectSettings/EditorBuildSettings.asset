@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Behandeltraject.unity
     guid: 6118e3769a1ab044587e9d36b0968ff2
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/Missie1.unity
+    path: Assets/Scenes/MissieScenes/M1_Armen.unity
     guid: fb4e0fdc282ca1e45862661283a2717b
   - enabled: 1
     path: Assets/Scenes/MissieScenes/PersonelijkeMissie.unity
@@ -51,16 +51,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Charactercreator.unity
     guid: 7e1c0ad1c73f5cf4c8206dea07d5ebfd
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/Armbreuk2.unity
+    path: Assets/Scenes/MissieScenes/M3_Armen.unity
     guid: 66a6d12a3a0a6f74aad789f244a61045
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/Beenbreuk2.unity
+    path: Assets/Scenes/MissieScenes/M2_Benen.unity
     guid: 2ad1052ac1783f946826619621e7eb72
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/Ribbreuk.unity
+    path: Assets/Scenes/MissieScenes/M1_Ribben.unity
     guid: 4d06992db61e3004bb09b18ef18fe257
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/Ribbreuk2.unity
+    path: Assets/Scenes/MissieScenes/M2_Ribben.unity
     guid: 48c587acb5a88c342b7d54a9176a892e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
