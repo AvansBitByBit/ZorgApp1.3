@@ -431,14 +431,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 299247781}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 9
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -447,14 +447,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 299247781}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 9
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1487,51 +1487,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291963701}
   m_CullTransparentMesh: 1
---- !u!1 &299247780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 299247782}
-  - component: {fileID: 299247781}
-  m_Layer: 0
-  m_Name: Missie2Message
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &299247781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299247780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ddf30d0c75f5da43bcce9b348689d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdownPanel: {fileID: 1233288709}
---- !u!4 &299247782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299247780}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -641.1157, y: 41.4373, z: 3.0197186}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1126094798}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &331788856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,51 +1581,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &383135494
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 383135495}
-  - component: {fileID: 383135496}
-  m_Layer: 0
-  m_Name: Missie4Message
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &383135495
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383135494}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1126094798}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &383135496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383135494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ddf30d0c75f5da43bcce9b348689d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdownPanel: {fileID: 5578757}
 --- !u!1 &421397338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,14 +2203,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 383135496}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -2309,14 +2219,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 383135496}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -2697,14 +2607,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1208430652}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 10
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -2713,14 +2623,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1208430652}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 10
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -4007,10 +3917,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1975541167}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4023,10 +3933,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1975541167}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4628,14 +4538,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1208430652}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -4644,14 +4554,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1208430652}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -4822,9 +4732,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1975541168}
-  - {fileID: 299247782}
-  - {fileID: 1208430653}
-  - {fileID: 383135495}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1161199635
@@ -5253,51 +5160,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202148084}
   m_CullTransparentMesh: 1
---- !u!1 &1208430651
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1208430653}
-  - component: {fileID: 1208430652}
-  m_Layer: 0
-  m_Name: Missie3Message
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1208430652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208430651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ddf30d0c75f5da43bcce9b348689d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdownPanel: {fileID: 978337292}
---- !u!4 &1208430653
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208430651}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1126094798}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231135105
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,14 +5527,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 299247781}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 5
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -5681,14 +5543,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 299247781}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 5
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -5995,14 +5857,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 383135496}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 7
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -6011,14 +5873,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 383135496}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 7
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -6431,14 +6293,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 383135496}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 11
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -6447,14 +6309,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 383135496}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 11
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -6747,14 +6609,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1975541167}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -6763,14 +6625,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1975541167}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -7536,14 +7398,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 299247781}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -7552,14 +7414,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 299247781}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -8347,7 +8209,7 @@ GameObject:
   - component: {fileID: 1962015261}
   - component: {fileID: 1962015260}
   - component: {fileID: 1962015259}
-  - component: {fileID: 1962015258}
+  - component: {fileID: 1962015263}
   m_Layer: 5
   m_Name: Missie 3 Benen
   m_TagString: Untagged
@@ -8375,51 +8237,6 @@ RectTransform:
   m_AnchoredPosition: {x: 251.11574, y: -47.437305}
   m_SizeDelta: {x: 66.949, y: 72.0079}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1962015258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962015256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1208430652}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
-          m_MethodName: ToggleDropdown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1208430652}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
-          m_MethodName: ToggleDropdown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1962015259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8529,6 +8346,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962015256}
   m_CullTransparentMesh: 1
+--- !u!114 &1962015263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962015256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
+          m_MethodName: ToggleDropdown
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
+          m_MethodName: ToggleDropdown
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 6
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1967689693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8812,27 +8674,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1975541168}
-  - component: {fileID: 1975541167}
+  - component: {fileID: 1975541169}
   m_Layer: 0
-  m_Name: Missie1Message
+  m_Name: TooltipScriptObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1975541167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1975541166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ddf30d0c75f5da43bcce9b348689d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdownPanel: {fileID: 1851607587}
 --- !u!4 &1975541168
 Transform:
   m_ObjectHideFlags: 0
@@ -8848,6 +8697,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1126094798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975541169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975541166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c937080ec04a67f45bfa573d139ab79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdownPanel: {fileID: 1851607587}
+  dropdownPanel1: {fileID: 1233288709}
+  dropdownPanel2: {fileID: 978337292}
+  dropdownPanel3: {fileID: 5578757}
+  dropdownPanel4: {fileID: 1258067414}
+  dropdownPanel5: {fileID: 2117966314}
+  dropdownPanel6: {fileID: 619889993}
+  dropdownPanel7: {fileID: 1179832359}
+  dropdownPanel8: {fileID: 1821948882}
+  dropdownPanel9: {fileID: 1001717865}
+  dropdownPanel10: {fileID: 750948646}
+  dropdownPanel11: {fileID: 720753628}
 --- !u!1 &1982198091
 GameObject:
   m_ObjectHideFlags: 0
@@ -9352,14 +9225,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1975541167}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 8
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -9368,14 +9241,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1975541167}
-          m_TargetAssemblyTypeName: CustomDropdown, Assembly-CSharp
+        - m_Target: {fileID: 1975541169}
+          m_TargetAssemblyTypeName: TooltipScript, Assembly-CSharp
           m_MethodName: ToggleDropdown
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 8
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
