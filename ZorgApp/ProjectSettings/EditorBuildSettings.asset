@@ -50,6 +50,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Charactercreator.unity
     guid: 7e1c0ad1c73f5cf4c8206dea07d5ebfd
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/Armbreuk2.unity
+    guid: 66a6d12a3a0a6f74aad789f244a61045
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/Beenbreuk2.unity
+    guid: 2ad1052ac1783f946826619621e7eb72
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/Ribbreuk.unity
+    guid: 4d06992db61e3004bb09b18ef18fe257
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/Ribbreuk2.unity
+    guid: 48c587acb5a88c342b7d54a9176a892e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

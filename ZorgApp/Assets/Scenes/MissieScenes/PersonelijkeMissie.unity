@@ -254,7 +254,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ArmBreuk
+          m_StringArgument: Armbreuk
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11500000, guid: 25eff689e2059cb419d6a44da3fe339e, type: 3}
@@ -508,7 +508,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 425049258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 42529695}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ribbreuk
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &425049258
 MonoBehaviour:
   m_ObjectHideFlags: 0
