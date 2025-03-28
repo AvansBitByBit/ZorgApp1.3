@@ -39,6 +39,8 @@ public class WebClient : MonoBehaviour
         }
     }
 
+
+
     public void SetToken(string token)
     {
         this.token = token;

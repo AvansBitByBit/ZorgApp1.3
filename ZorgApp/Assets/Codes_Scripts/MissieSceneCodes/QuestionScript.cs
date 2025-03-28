@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class QuestionScript : MonoBehaviour
@@ -6,15 +7,21 @@ public class QuestionScript : MonoBehaviour
   public GameObject Answer2;
   public GameObject Answer3;
   public GameObject NextMission;
+  public  TMP_Text Status;
 
   public void OnAnswer1Clicked()
   {
     Debug.Log("Answer 1 clicked");
+    Status.text = "Fout! Probeer het opnieuw." +
+                  "" +
+                  "Tip: Wat voor foto wordt er gemaakt?";
+
   }
 
   public void OnAnswer2Clicked()
   {
     Debug.Log("Answer 2 clicked");
+    Status.text = "Goed gedaan!";
     NextMission.SetActive(true);
 
   }
@@ -22,6 +29,9 @@ public class QuestionScript : MonoBehaviour
   public void OnAnswer3Clicked()
   {
     Debug.Log("Answer 3 clicked");
+    Status.text = "Fout! Probeer het opnieuw." +
+                  "" +
+                  "Tip: Wat voor foto wordt er gemaakt?";
   }
 
 
