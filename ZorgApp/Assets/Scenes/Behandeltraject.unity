@@ -527,7 +527,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie2
+          m_StringArgument: M2_Ribben
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &54984093
@@ -2467,7 +2467,7 @@ RectTransform:
   m_GameObject: {fileID: 589421533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7708, y: 1.7708, z: 1.7708}
+  m_LocalScale: {x: 2.7475731, y: 2.7475731, z: 2.7475731}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 124060582}
@@ -2475,7 +2475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0013428, y: -46}
+  m_AnchoredPosition: {x: 0.001301, y: -46}
   m_SizeDelta: {x: 36.1602, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589421535
@@ -2790,7 +2790,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie3
+          m_StringArgument: M3_Ribben
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &674094166
@@ -3339,7 +3339,7 @@ RectTransform:
   m_GameObject: {fileID: 828787494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7971871, y: 1.7971871, z: 1.7971871}
+  m_LocalScale: {x: 2.7374754, y: 2.7374754, z: 2.7374754}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1565978675}
@@ -3347,7 +3347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0013428, y: 33}
+  m_AnchoredPosition: {x: 0.0012939, y: 64.7}
   m_SizeDelta: {x: 27.038, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828787496
@@ -3596,7 +3596,7 @@ RectTransform:
   m_GameObject: {fileID: 862175676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7071, y: 1.7071, z: 1.7071}
+  m_LocalScale: {x: 2.708997, y: 2.708997, z: 2.708997}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 514924165}
@@ -3604,7 +3604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.435, y: 108}
+  m_AnchoredPosition: {x: -3.1261, y: 174.6}
   m_SizeDelta: {x: 29.9054, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &862175678
@@ -5788,7 +5788,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie2
+          m_StringArgument: M2_Benen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1280824302
@@ -6103,7 +6103,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie4
+          m_StringArgument: TipPlaneet
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1311866781
@@ -6539,7 +6539,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie4
+          m_StringArgument: TipPlaneet
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1446898124
@@ -6870,7 +6870,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie1
+          m_StringArgument: M1_Benen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1478272943
@@ -8470,7 +8470,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie3
+          m_StringArgument: M3_Benen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1962015261
@@ -9487,7 +9487,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Missie1
+          m_StringArgument: M1_Ribben
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2134722661
