@@ -15,12 +15,33 @@ EditorBuildSettings:
     path: Assets/Scenes/MissieScenes/M1_Armen.unity
     guid: fb4e0fdc282ca1e45862661283a2717b
   - enabled: 1
+    path: Assets/Scenes/MissieScenes/M2_Armen.unity
+    guid: 0c746da4a6aab26488108095c7520471
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/M3_Armen.unity
+    guid: 66a6d12a3a0a6f74aad789f244a61045
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/M1_Ribben.unity
+    guid: 4d06992db61e3004bb09b18ef18fe257
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/M2_Ribben.unity
+    guid: 48c587acb5a88c342b7d54a9176a892e
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/M1_Benen.unity
+    guid: c6c8aade90f359b47a8985ee362e999c
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/M2_Benen.unity
+    guid: 2ad1052ac1783f946826619621e7eb72
+  - enabled: 1
     path: Assets/Scenes/MissieScenes/PersonelijkeMissie.unity
     guid: 005a1c93005af13428eb4100f6c4640e
   - enabled: 1
+    path: Assets/Scenes/MissieScenes/TipPlaneet.unity
+    guid: 5a02f94d7defae7449b174fe2907c20e
+  - enabled: 0
     path: Assets/Scenes/MissieScenes/Armbreuk.unity
     guid: e15ec01e91dbe6d4cbc79efc79c2f384
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MissieScenes/Beenbreuk.unity
     guid: 1e4c7de5337bcd445b2dd4f8cde62765
   - enabled: 1
@@ -50,18 +71,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Charactercreator.unity
     guid: 7e1c0ad1c73f5cf4c8206dea07d5ebfd
-  - enabled: 1
-    path: Assets/Scenes/MissieScenes/M3_Armen.unity
-    guid: 66a6d12a3a0a6f74aad789f244a61045
-  - enabled: 1
-    path: Assets/Scenes/MissieScenes/M2_Benen.unity
-    guid: 2ad1052ac1783f946826619621e7eb72
-  - enabled: 1
-    path: Assets/Scenes/MissieScenes/M1_Ribben.unity
-    guid: 4d06992db61e3004bb09b18ef18fe257
-  - enabled: 1
-    path: Assets/Scenes/MissieScenes/M2_Ribben.unity
-    guid: 48c587acb5a88c342b7d54a9176a892e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

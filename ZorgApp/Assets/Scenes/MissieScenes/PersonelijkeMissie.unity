@@ -254,7 +254,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Armbreuk
+          m_StringArgument: M2_Armen
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11500000, guid: 25eff689e2059cb419d6a44da3fe339e, type: 3}
@@ -518,7 +518,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Ribbreuk
+          m_StringArgument: M1_Ribben
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &425049258
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Terug
+  m_text: Terug naar Instellingen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
   m_sharedMaterial: {fileID: -5794304836460118084, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
@@ -1077,7 +1077,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Armbreuk
+          m_StringArgument: M2_Armen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &895367293
@@ -1404,7 +1404,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Beenbreuk
+          m_StringArgument: M1_Benen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1226478947
@@ -1476,10 +1476,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 895367291}
+  - {fileID: 295548070}
   - {fileID: 1226478945}
   - {fileID: 2107551473}
   - {fileID: 538700182}
-  - {fileID: 295548070}
   - {fileID: 425049256}
   - {fileID: 1715958782}
   - {fileID: 338993276}
@@ -1566,8 +1566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.619995, y: -20.79004}
-  m_SizeDelta: {x: 160, y: 40.829697}
+  m_AnchoredPosition: {x: 120.8, y: -225.03}
+  m_SizeDelta: {x: 200.6921, y: 85.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434338589
 MonoBehaviour:
@@ -1622,7 +1622,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Behandeltraject
+          m_StringArgument: Accountgegevens
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1434338590
@@ -2248,7 +2248,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Beenbreuk
+          m_StringArgument: M1_Benen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2107551476
