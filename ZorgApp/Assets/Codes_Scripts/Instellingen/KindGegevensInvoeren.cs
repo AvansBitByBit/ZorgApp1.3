@@ -19,7 +19,7 @@ public class KindGegevensInvoeren : MonoBehaviour
 
     void Start()
     {
-        
+
 
         saveButton.onClick.AddListener(OnSaveButtonClicked);
         ArmLinks.onClick.AddListener(OnArmLinksButtonClicked);
@@ -54,7 +54,7 @@ public class KindGegevensInvoeren : MonoBehaviour
         Traject = 1;
     }
 
-    private async void OnSaveButtonClicked()
+    public async void OnSaveButtonClicked()
     {
         string name = nameInputField.text;
         string lastname = lastnameInputField.text;

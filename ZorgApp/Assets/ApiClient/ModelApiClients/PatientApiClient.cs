@@ -6,9 +6,7 @@ namespace ApiClient.ModelApiClients
 {
     public class PatientApiClient : MonoBehaviour
     {
-        private readonly WebClient webClient;
-
-
+        public WebClient webClient;
 
         public async Task<IWebRequestReponse> GetPatientsAsync()
         {
