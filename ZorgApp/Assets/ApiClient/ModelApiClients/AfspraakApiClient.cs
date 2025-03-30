@@ -6,6 +6,7 @@ public class AfspraakApiClient : MonoBehaviour
 {
     public WebClient webClient;
 
+
     public async Task<IWebRequestReponse> CreateAfspraak(Afspraak afspraak)
     {
         string route = "/Afspraak";

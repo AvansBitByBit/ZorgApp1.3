@@ -1,7 +1,10 @@
+using System.Threading.Tasks;
+using ApiClient.ModelApiClients;
+using ApiClient.Models;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KindGegevensInvvoeren : MonoBehaviour
+public class KindGegevensInvoeren : MonoBehaviour
 {
     public Button saveButton;
     public TMPro.TMP_InputField nameInputField;
@@ -11,9 +14,13 @@ public class KindGegevensInvvoeren : MonoBehaviour
     public Button BeenLinks;
     public Button BeenRechts;
     public Button Ribben;
-    
+    private int Traject;
+    public PatientApiClient patientApiClient;
+
     void Start()
     {
+        
+
         saveButton.onClick.AddListener(OnSaveButtonClicked);
         ArmLinks.onClick.AddListener(OnArmLinksButtonClicked);
         ArmRechts.onClick.AddListener(OnArmRechtsButtonClicked);
@@ -24,31 +31,53 @@ public class KindGegevensInvvoeren : MonoBehaviour
 
     private void OnArmRechtsButtonClicked()
     {
-        
+        Traject = 1;
     }
 
     private void OnBeenLinksButtonClicked()
     {
-        throw new System.NotImplementedException();
+        Traject = 2;
     }
 
     private void OnRibbenButtonClicked()
     {
-        throw new System.NotImplementedException();
+        Traject = 3;
     }
 
     private void OnBeenRechtsButtonClicked()
     {
-        throw new System.NotImplementedException();
+        Traject = 2;
     }
 
     private void OnArmLinksButtonClicked()
     {
-        throw new System.NotImplementedException();
+        Traject = 1;
     }
 
-    private void OnSaveButtonClicked()
+    private async void OnSaveButtonClicked()
     {
-        throw new System.NotImplementedException();
+        string name = nameInputField.text;
+        string lastname = lastnameInputField.text;
+
+        Patient patient = new Patient
+        {
+            Voornaam = name,
+            Achternaam = lastname,
+            TrajectID = Traject
+        };
+
+        string jsonData = JsonUtility.ToJson(patient);
+        Debug.Log("Sending JSON data: " + jsonData);
+
+        IWebRequestReponse response = await patientApiClient.CreatePatientAsync(patient);
+
+        if (response is WebRequestData<string> data)
+        {
+            Debug.Log("Patient created successfully: " + data.Data);
+        }
+        else
+        {
+            Debug.LogError("Failed to create Patient: " + response);
+        }
     }
 }

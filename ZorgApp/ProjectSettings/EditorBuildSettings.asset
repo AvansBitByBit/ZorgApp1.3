@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MissieScenes/Beenbreuk.unity
     guid: 1e4c7de5337bcd445b2dd4f8cde62765
   - enabled: 1
-    path: Assets/Scenes/WatMoetHiermeeInstellingen.unity
+    path: Assets/Scenes/Instellingen.unity
     guid: 060d5fa6b45f3ea418d57058d7814348
   - enabled: 1
     path: Assets/Scenes/DagboekScene.unity

@@ -4,14 +4,11 @@ using UnityEngine;
 
 namespace ApiClient.ModelApiClients
 {
-    public class PatientApiClient
+    public class PatientApiClient : MonoBehaviour
     {
         private readonly WebClient webClient;
 
-        public PatientApiClient(WebClient webClient)
-        {
-            this.webClient = webClient;
-        }
+
 
         public async Task<IWebRequestReponse> GetPatientsAsync()
         {
@@ -23,7 +20,16 @@ namespace ApiClient.ModelApiClients
         {
             string route = "/Patient";
             string data = JsonUtility.ToJson(patient);
-            return await webClient.SendPostRequest(route, data);
+            Debug.Log("Sending POST request to " + route + " with data: " + data);
+
+            IWebRequestReponse response = await webClient.SendPostRequest(route, data);
+
+            if (response is WebRequestError error)
+            {
+                Debug.LogError($"Failed to create Patient: {error.ErrorMessage}");
+            }
+
+            return response;
         }
 
         public async Task<IWebRequestReponse> UpdatePatientAsync(int id, Patient patient)
