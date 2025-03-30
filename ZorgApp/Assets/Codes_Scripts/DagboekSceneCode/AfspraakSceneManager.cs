@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class AfspraakSceneManager : MonoBehaviour
 {
     public AfspraakApiClient afspraakApiClient;
@@ -45,12 +46,12 @@ public class AfspraakSceneManager : MonoBehaviour
 
         if (response is WebRequestData<string> dataResponse)
         {
-            Debug.Log("Raw API response: " + dataResponse.Data);
+            Debug.Log("Raw API response: " + dataResponse.Data); // dataResponse.Data is gewoon met alle afspramen
 
             try
             {
-                List<Afspraak> afspraken = JsonHelper.ParseJsonArray<Afspraak>(dataResponse.Data);
-                Debug.Log($"Successfully parsed {afspraken.Count} appointments");
+                List<Afspraak> afspraken = JsonHelper.ParseJsonArray<Afspraak>(dataResponse.Data); // hier moet tie parsen doet tie niet
+                Debug.Log($"Successfully parsed {afspraken.Count} appointments"); // hij ziet de count, door de id maar derest is null.
 
                 if (afspraken.Count == 0)
                 {
@@ -107,7 +108,7 @@ public class AfspraakSceneManager : MonoBehaviour
             for (int i = 0; i < Mathf.Min(afspraken.Count, afspraakButtons.Length); i++)
             {
                 Afspraak afspraak = afspraken[i];
-                string afspraakId = afspraak.Id;
+                string afspraakId = afspraak.ID;
                 string afspraakTitle = afspraak.Titel;
                 string naamDokter = afspraak.NaamDokter;
                 string datumTijd = afspraak.DatumTijd;
@@ -177,7 +178,7 @@ public class AfspraakSceneManager : MonoBehaviour
 
             foreach (var afspraak in afspraken)
             {
-                await afspraakApiClient.DeleteAfspraak(afspraak.Id);
+                await afspraakApiClient.DeleteAfspraak(afspraak.ID);
             }
 
             feedbackText.text = "✅ All appointments deleted!";
@@ -185,3 +186,4 @@ public class AfspraakSceneManager : MonoBehaviour
         }
     }
 }
+
