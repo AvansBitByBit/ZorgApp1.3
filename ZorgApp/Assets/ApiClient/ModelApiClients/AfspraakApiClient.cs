@@ -10,12 +10,13 @@ public class AfspraakApiClient : MonoBehaviour
     {
         string route = "/Afspraak";
         string data = JsonUtility.ToJson(afspraak);
+        Debug.Log("Sending POST request to " + route + " with data: " + data);
 
         IWebRequestReponse response = await webClient.SendPostRequest(route, data);
 
         if (response is WebRequestError error)
         {
-            Debug.LogError($"Failed to create Afspraak: ");
+            Debug.LogError($"Failed to create Afspraak: {error.ErrorMessage}");
         }
 
         return response;
@@ -27,7 +28,7 @@ public class AfspraakApiClient : MonoBehaviour
         return await webClient.SendGetRequest(route);
     }
 
-    public async Task<IWebRequestReponse> DeleteAfspraak(int afspraakId)
+    public async Task<IWebRequestReponse> DeleteAfspraak(string afspraakId)
     {
         string route = $"/Afspraak/{afspraakId}";
         return await webClient.SendDeleteRequest(route);

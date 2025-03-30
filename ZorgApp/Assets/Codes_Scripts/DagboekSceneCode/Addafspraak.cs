@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
-public class Addafspraak : MonoBehaviour
+public class AddAfspraak : MonoBehaviour
 {
     public GameObject CreateAfspraak;
     public TMP_InputField Titel;
@@ -23,13 +24,26 @@ public class Addafspraak : MonoBehaviour
         string naamDokter = NaamDokter.text;
         string datumTijd = DatumTijd.text;
 
+        // Convert DatumTijd to ISO 8601 format
+        DateTime parsedDate;
+        if (!DateTime.TryParse(datumTijd, out parsedDate))
+        {
+            Debug.LogError("Invalid date format. Please use a valid date format.");
+            return;
+        }
+        string isoDatumTijd = parsedDate.ToString("yyyy-MM-ddTHH:mm:ss");
+
         Afspraak afspraak = new Afspraak
         {
+            ID = Guid.NewGuid().ToString(),
             Titel = titel,
             NaamDokter = naamDokter,
-            DatumTijd = datumTijd,
-            UserId = "currentUserId"
+            DatumTijd = isoDatumTijd,
+            Actief = 0
         };
+
+        string jsonData = JsonUtility.ToJson(afspraak);
+        Debug.Log("Sending JSON data: " + jsonData);
 
         IWebRequestReponse response = await afspraakApiClient.CreateAfspraak(afspraak);
 
