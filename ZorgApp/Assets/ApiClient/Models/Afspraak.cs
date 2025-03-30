@@ -4,7 +4,7 @@ using System;
 [Serializable]
 public class Afspraak
 {
-    public string ID;
+    public string Id;
     public string Titel;
     public string NaamDokter;
     public string DatumTijd;

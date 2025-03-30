@@ -35,7 +35,7 @@ public class AddAfspraak : MonoBehaviour
 
         Afspraak afspraak = new Afspraak
         {
-            ID = Guid.NewGuid().ToString(),
+            Id = Guid.NewGuid().ToString(),
             Titel = titel,
             NaamDokter = naamDokter,
             DatumTijd = isoDatumTijd,

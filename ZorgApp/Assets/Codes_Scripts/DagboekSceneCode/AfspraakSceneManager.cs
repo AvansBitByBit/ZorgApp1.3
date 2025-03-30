@@ -107,7 +107,7 @@ public class AfspraakSceneManager : MonoBehaviour
             for (int i = 0; i < Mathf.Min(afspraken.Count, afspraakButtons.Length); i++)
             {
                 Afspraak afspraak = afspraken[i];
-                string afspraakId = afspraak.ID;
+                string afspraakId = afspraak.Id;
                 string afspraakTitle = afspraak.Titel;
                 string naamDokter = afspraak.NaamDokter;
                 string datumTijd = afspraak.DatumTijd;
@@ -177,7 +177,7 @@ public class AfspraakSceneManager : MonoBehaviour
 
             foreach (var afspraak in afspraken)
             {
-                await afspraakApiClient.DeleteAfspraak(afspraak.ID);
+                await afspraakApiClient.DeleteAfspraak(afspraak.Id);
             }
 
             feedbackText.text = "✅ All appointments deleted!";
