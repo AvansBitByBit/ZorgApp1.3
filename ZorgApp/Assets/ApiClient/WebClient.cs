@@ -25,19 +25,21 @@ public class WebClient : MonoBehaviour
             Debug.LogWarning("⚠️ No token found in PlayerPrefs.");
         }
     }
-    public void CheckToken()
+    public bool CheckToken()
     {
         token = PlayerPrefs.GetString("access_token", null);
         if (string.IsNullOrEmpty(token))
         {
-            Debug.LogWarning("⚠️ No token found in PlayerPrefs. Redirecting to login page.");
-            SceneManager.LoadScene("LoginScene");
+            Debug.LogWarning("⚠️ No token found in PlayerPrefs.");
+            return false;
         }
         else
         {
             Debug.Log("✅ Token loaded from PlayerPrefs: " + token);
+            return true;
         }
     }
+
 
 
 

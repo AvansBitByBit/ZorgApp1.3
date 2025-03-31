@@ -66,4 +66,4 @@ public class AfspraakApiClient : MonoBehaviour
 
         return response is WebRequestData<string>;
     }
-}
+} 

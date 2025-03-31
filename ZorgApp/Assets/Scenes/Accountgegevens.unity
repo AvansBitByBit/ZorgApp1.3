@@ -2982,6 +2982,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775079352}
   m_CullTransparentMesh: 1
+--- !u!1 &805705663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 805705665}
+  - component: {fileID: 805705664}
+  m_Layer: 0
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &805705664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805705663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d315b680b1a1ce4785c3eaf371c383b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enlargeOnHoverButtons:
+  - {fileID: 1651244644}
+  - {fileID: 2055389325}
+  - {fileID: 1545189837}
+  - {fileID: 1915227876}
+  - {fileID: 1404228465}
+  - {fileID: 1193970797}
+  - {fileID: 367008402}
+  - {fileID: 1657879000}
+  - {fileID: 2098296814}
+  - {fileID: 528920134}
+  - {fileID: 472216833}
+  - {fileID: 824287247}
+  - {fileID: 1752832561}
+  - {fileID: 348014850}
+  - {fileID: 1952117484}
+  - {fileID: 504779200}
+  - {fileID: 256196381}
+  disableIfNotLoggedInButtons: []
+  UnclickableButtons:
+  - {fileID: 1587436144}
+  - {fileID: 1739242737}
+  - {fileID: 1421627239}
+  - {fileID: 239776279}
+  - {fileID: 1010117369}
+  _webclient: {fileID: 536895246}
+--- !u!4 &805705665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805705663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 608.19385, y: 186.25781, z: 3.641981}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &816892357
 GameObject:
   m_ObjectHideFlags: 0
@@ -8942,3 +9012,4 @@ SceneRoots:
   - {fileID: 872988299}
   - {fileID: 907637003}
   - {fileID: 896501820}
+  - {fileID: 805705665}

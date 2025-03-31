@@ -10,7 +10,7 @@ public class SwitchToLoginPage : MonoBehaviour
         SwitchToRegisterButton,
         ZonderAccountButton1,
         ZonderAccountButton;
-    
+    public WebClient webClient;
 
     void Start()
     {
@@ -18,6 +18,7 @@ public class SwitchToLoginPage : MonoBehaviour
         SwitchToRegisterButton.onClick.AddListener(ShowRegisterContainer);
         ZonderAccountButton.onClick.AddListener(ZonderAccount);
         ZonderAccountButton1.onClick.AddListener(ZonderAccount);
+        webClient.SetToken(null);
     }
     
 

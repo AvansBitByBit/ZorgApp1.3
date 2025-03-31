@@ -14347,6 +14347,199 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135524214}
   m_CullTransparentMesh: 1
+--- !u!1001 &286214516947548612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: enlargeOnHoverButtons.Array.size
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1731912495}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1013858036}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 36816947}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[3]'
+      value: 
+      objectReference: {fileID: 894780927}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1024924700}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1501629056}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[6]'
+      value: 
+      objectReference: {fileID: 568364366}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[7]'
+      value: 
+      objectReference: {fileID: 44912604}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[8]'
+      value: 
+      objectReference: {fileID: 600964580}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[9]'
+      value: 
+      objectReference: {fileID: 1530697940}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1315869577}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[11]'
+      value: 
+      objectReference: {fileID: 1798769727}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1525690813}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[13]'
+      value: 
+      objectReference: {fileID: 2073190261}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[14]'
+      value: 
+      objectReference: {fileID: 81258079}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[15]'
+      value: 
+      objectReference: {fileID: 1041355753}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[16]'
+      value: 
+      objectReference: {fileID: 1258840315}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[17]'
+      value: 
+      objectReference: {fileID: 1701681779}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[18]'
+      value: 
+      objectReference: {fileID: 2094592365}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[19]'
+      value: 
+      objectReference: {fileID: 1886375179}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[20]'
+      value: 
+      objectReference: {fileID: 538821782}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[21]'
+      value: 
+      objectReference: {fileID: 775734225}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[22]'
+      value: 
+      objectReference: {fileID: 631328306}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[23]'
+      value: 
+      objectReference: {fileID: 1180095183}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[24]'
+      value: 
+      objectReference: {fileID: 1038416151}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[25]'
+      value: 
+      objectReference: {fileID: 251384475}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[26]'
+      value: 
+      objectReference: {fileID: 626880698}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[27]'
+      value: 
+      objectReference: {fileID: 2024918152}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[28]'
+      value: 
+      objectReference: {fileID: 1930861342}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[29]'
+      value: 
+      objectReference: {fileID: 702025977}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[30]'
+      value: 
+      objectReference: {fileID: 2052742742}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[31]'
+      value: 
+      objectReference: {fileID: 1956761806}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[32]'
+      value: 
+      objectReference: {fileID: 1163632998}
+    - target: {fileID: 6829712156289545224, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_Name
+      value: ButtonManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 692.1292
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 287.47495
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.727261
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047827838642100074, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -14360,3 +14553,4 @@ SceneRoots:
   - {fileID: 982590348}
   - {fileID: 1088785658}
   - {fileID: 1682109918}
+  - {fileID: 286214516947548612}
