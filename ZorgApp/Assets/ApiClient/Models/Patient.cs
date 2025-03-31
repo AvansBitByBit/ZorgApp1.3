@@ -6,10 +6,11 @@ namespace ApiClient.Models
     [Serializable]
     public class Patient
     {
-        public int ID;
-        public string Voornaam;
-        public string Achternaam;
-        public int TrajectID;
+        public int id;
+        public string voornaam;
+        public string achternaam;
+        public int trajectID;
 
     }
 }
+

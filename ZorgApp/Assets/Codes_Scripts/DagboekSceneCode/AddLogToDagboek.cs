@@ -31,10 +31,10 @@ public class AddLogToDagboek : MonoBehaviour
 
         Dagboek dagboek = new Dagboek
         {
-            Title = title,
-            Contents = contents,
-            Date = DateTime.Now.ToString("yyyy-MM-dd"),
-            UserId = "currentUserId" // Replace with the actual user ID
+            title = title,
+            contents = contents,
+            date = DateTime.Now.ToString("yyyy-MM-dd"),
+            userId = "currentUserId" // Replace with the actual user ID
         };
 
         IWebRequestReponse response = await dagboekApiClient.PushDagboek(dagboek);

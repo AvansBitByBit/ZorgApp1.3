@@ -61,9 +61,9 @@ public class KindGegevensInvoeren : MonoBehaviour
 
         Patient patient = new Patient
         {
-            Voornaam = name,
-            Achternaam = lastname,
-            TrajectID = Traject
+            voornaam = name,
+            achternaam = lastname,
+            trajectID = Traject
         };
 
         string jsonData = JsonUtility.ToJson(patient);

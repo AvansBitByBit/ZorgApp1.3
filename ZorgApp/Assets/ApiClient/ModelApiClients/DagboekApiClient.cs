@@ -29,7 +29,7 @@ public class DagboekApiClient : MonoBehaviour
 
     public async Task<IWebRequestReponse> UpdateDagboek(Dagboek dagboek)
     {
-        string route = $"/Dagboek/{dagboek.ID}";
+        string route = $"/Dagboek/{dagboek.id}";
         string data = JsonUtility.ToJson(dagboek);
 
         return await webClient.SendPutRequest(route, data);
