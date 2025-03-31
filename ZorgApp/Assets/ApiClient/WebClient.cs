@@ -99,6 +99,7 @@ public class WebClient : MonoBehaviour
     private async Awaitable<IWebRequestReponse> SendWebRequest(UnityWebRequest webRequest)
     {
         await webRequest.SendWebRequest();
+
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
             string responseData = webRequest.downloadHandler.text;
@@ -106,10 +107,12 @@ public class WebClient : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"WebRequestError: {webRequest.error}, Response Code: {webRequest.responseCode}, URL: {webRequest.url}");
+            string responseText = webRequest.downloadHandler.text;
+            Debug.LogError($"❌ WebRequestError: {webRequest.error}\nURL: {webRequest.url}\nResponse Code: {webRequest.responseCode}\nResponse Body: {responseText}");
             return new WebRequestError(webRequest.error);
         }
     }
+
  
     private void AddToken(UnityWebRequest webRequest)
     {

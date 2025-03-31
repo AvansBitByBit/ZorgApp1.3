@@ -7,8 +7,14 @@ public static class JsonHelper
 {
     public static List<T> ParseJsonArray<T>(string jsonArray)
     {
-        string extendedJson = "{\"list\":" + jsonArray + "}";
-        JsonList<T> parsedList = JsonUtility.FromJson<JsonList<T>>(extendedJson);
+        if (!jsonArray.Trim().StartsWith("["))
+        {
+            Debug.LogError("❌ JSON array expected but got something else!");
+            return new List<T>();
+        }
+
+        string wrappedJson = "{ \"list\": " + jsonArray + " }";
+        JsonList<T> parsedList = JsonUtility.FromJson<JsonList<T>>(wrappedJson);
         return parsedList.list;
     }
 

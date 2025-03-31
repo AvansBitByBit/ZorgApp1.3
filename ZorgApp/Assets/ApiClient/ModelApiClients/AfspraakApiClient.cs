@@ -1,37 +1,69 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
+/// <summary>
+/// Handles communication with the Afspraak Web API.
+/// </summary>
 public class AfspraakApiClient : MonoBehaviour
 {
     public WebClient webClient;
 
+    /// <summary>
+    /// Fetches the list of afspraken for the authenticated user.
+    /// </summary>
+    /// <returns>A list of afspraken.</returns>
+    public async Task<List<Afspraak>> GetAfspraken()
+    {
+        string route = "/Afspraak";
+        var response = await webClient.SendGetRequest(route);
 
-    public async Task<IWebRequestReponse> CreateAfspraak(Afspraak afspraak)
+        if (response is WebRequestData<string> jsonResponse)
+        {
+            return JsonHelper.ParseJsonArray<Afspraak>(jsonResponse.Data);
+        }
+        else
+        {
+            Debug.LogError($"Error fetching afspraken: {((WebRequestError)response).ErrorMessage}");
+            return new List<Afspraak>();
+        }
+    }
+
+    /// <summary>
+    /// Creates a new afspraak.
+    /// </summary>
+    /// <param name="afspraak">The afspraak model.</param>
+    /// <returns>True if the afspraak is successfully created, otherwise false.</returns>
+    /// <example>
+    /// Example JSON body:
+    /// {
+    ///     "Titel": "Doktersafspraak",
+    ///     "NaamDokter": "Dr. Smith",
+    ///     "DatumTijd": "2025-01-01T00:00:00",
+    ///     "UserId": "user-id",
+    ///     "Actief": 1
+    /// }
+    /// </example>
+    public async Task<bool> CreateAfspraak(Afspraak afspraak)
     {
         string route = "/Afspraak";
         string data = JsonUtility.ToJson(afspraak);
-        Debug.Log("Sending POST request to " + route + " with data: " + data);
+        var response = await webClient.SendPostRequest(route, data);
 
-        IWebRequestReponse response = await webClient.SendPostRequest(route, data);
-
-        if (response is WebRequestError error)
-        {
-            Debug.LogError($"Failed to create Afspraak: {error.ErrorMessage}");
-        }
-
-        return response;
+        return response is WebRequestData<string>;
     }
 
-    public async Task<IWebRequestReponse> FetchAfspraken()
+    /// <summary>
+    /// Deletes an afspraak by ID.
+    /// </summary>
+    /// <param name="id">The ID of the afspraak to delete.</param>
+    /// <returns>True if the afspraak is successfully deleted, otherwise false.</returns>
+    public async Task<bool> DeleteAfspraak(Guid id)
     {
-        string route = "/Afspraak";
-        return await webClient.SendGetRequest(route);
-    }
+        string route = $"/Afspraak/{id}";
+        var response = await webClient.SendDeleteRequest(route);
 
-    public async Task<IWebRequestReponse> DeleteAfspraak(string afspraakId)
-    {
-        string route = $"/Afspraak/{afspraakId}";
-        return await webClient.SendDeleteRequest(route);
+        return response is WebRequestData<string>;
     }
 }

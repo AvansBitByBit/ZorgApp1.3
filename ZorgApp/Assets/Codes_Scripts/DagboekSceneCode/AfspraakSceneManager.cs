@@ -1,189 +1,230 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-
-public class AfspraakSceneManager : MonoBehaviour
+public class AfspraakManager : MonoBehaviour
 {
-    public AfspraakApiClient afspraakApiClient;
-    public TMP_Text feedbackText;
-    public Button[] afspraakButtons;
-    public Button deleteButton, refreshButton, deleteAllButton;
-    private string selectedAfspraakId;
-    private string selectedAfspraakTitle;
-    public GameObject notitiepaneel, afspraakpaneel;
-    public Button notitieknop;
+    private int geselecteerdeIndex = -1; // nieuw
+    [Header("Buttons")]
+    public List<Button> afspraakButtons;
+    public Button refreshButton;
+    public Button deleteButton;
+    public Button deleteAllButton;
+    public Button saveButton;
+    
 
-    void Start()
+    [Header("Input Fields")]
+    public TMP_InputField titleInput;
+    public TMP_InputField doctorInput;
+    public TMP_InputField dateInput;
+
+    [Header("WebClient Reference")]
+    public WebClient webClient;
+
+    private List<Afspraak> huidigeAfspraken = new();
+    private Afspraak geselecteerdeAfspraak;
+
+    private void Start()
     {
-        refreshButton.onClick.AddListener(LoadAfspraken);
+        refreshButton.onClick.AddListener(LaadAfspraken);
+        saveButton.onClick.AddListener(PostAfspraak);
         deleteButton.onClick.AddListener(DeleteSelectedAfspraak);
-        deleteAllButton.onClick.AddListener(DeleteAllAfspraken);
-        notitieknop.onClick.AddListener(HideAfsrpaakpaneel);
+        deleteAllButton.onClick.AddListener(DeleteAlleAfspraken);
 
-        LoadAfspraken();
+        LaadAfspraken();
     }
 
-    public void HideAfsrpaakpaneel()
+    private async void LaadAfspraken()
     {
-        afspraakpaneel.SetActive(false);
-    }
+        geselecteerdeAfspraak = null;
 
-    public async void LoadAfspraken()
-    {
-        feedbackText.text = "Loading appointments...";
-        Debug.Log("Starting appointment fetch...");
+        var response = await webClient.SendGetRequest("/Afspraak");
 
-        IWebRequestReponse response = await afspraakApiClient.FetchAfspraken();
-
-        if (response is WebRequestError error)
+        if (response == null)
         {
-            feedbackText.text = "❌ Error: " + error.ErrorMessage;
-            Debug.LogError("Failed to fetch appointments: " + error.ErrorMessage);
+            Debug.LogError("❌ response is null");
             return;
         }
 
-        if (response is WebRequestData<string> dataResponse)
+        if (response is WebRequestData<string> data)
         {
-            Debug.Log("Raw API response: " + dataResponse.Data); // dataResponse.Data is gewoon met alle afspramen
-
-            try
-            {
-                List<Afspraak> afspraken = JsonHelper.ParseJsonArray<Afspraak>(dataResponse.Data); // hier moet tie parsen doet tie niet
-                Debug.Log($"Successfully parsed {afspraken.Count} appointments"); // hij ziet de count, door de id maar derest is null.
-
-                if (afspraken.Count == 0)
-                {
-                    feedbackText.text = "No appointments found";
-                    ClearAppointmentButtons();
-                }
-                else
-                {
-                    feedbackText.text = $"Found {afspraken.Count} appointments";
-                    DisplayAfspraken(afspraken);
-                }
-            }
-            catch (System.Exception ex)
-            {
-                feedbackText.text = "❌ JSON parsing error!";
-                Debug.LogError($"JSON parsing error: {ex.Message}");
-                Debug.LogError($"JSON data: {dataResponse.Data}");
-            }
+            Debug.Log("📥 Ontvangen JSON:\n" + data.Data);
+            huidigeAfspraken = JsonHelper.ParseJsonArray<Afspraak>(data.Data);
+            ToonAfspraken();
         }
-    }
-
-    private void ClearAppointmentButtons()
-    {
-        for (int i = 0; i < afspraakButtons.Length; i++)
+        else if (response is WebRequestError error)
         {
-            TMP_Text buttonText = afspraakButtons[i].GetComponentInChildren<TMP_Text>();
-            buttonText.text = "Leeg Afspraak";
-            afspraakButtons[i].onClick.RemoveAllListeners();
-            afspraakButtons[i].interactable = false;
-        }
-    }
-
-    private void DisplayAfspraken(List<Afspraak> afspraken)
-    {
-        Debug.Log($"Displaying {afspraken.Count} appointments on {afspraakButtons.Length} buttons");
-
-        for (int i = 0; i < afspraakButtons.Length; i++)
-        {
-            TMP_Text buttonText = afspraakButtons[i].GetComponentInChildren<TMP_Text>();
-            if (buttonText != null)
-            {
-                buttonText.text = "Leeg Afspraak";
-            }
-            else
-            {
-                Debug.LogError($"Button {i} does not have a TMP_Text component.");
-            }
-            afspraakButtons[i].onClick.RemoveAllListeners();
-            afspraakButtons[i].interactable = false;
-        }
-
-        if (afspraken.Count > 0)
-        {
-            for (int i = 0; i < Mathf.Min(afspraken.Count, afspraakButtons.Length); i++)
-            {
-                Afspraak afspraak = afspraken[i];
-                string afspraakId = afspraak.ID;
-                string afspraakTitle = afspraak.Titel;
-                string naamDokter = afspraak.NaamDokter;
-                string datumTijd = afspraak.DatumTijd;
-
-                Debug.Log($"Afspraak {i}: Titel={afspraakTitle}, NaamDokter={naamDokter}, DatumTijd={datumTijd}");
-
-                TMP_Text buttonText = afspraakButtons[i].GetComponentInChildren<TMP_Text>();
-                if (buttonText != null)
-                {
-                    buttonText.text = afspraakTitle;
-                    Debug.Log($"Button {i} text set to: {buttonText.text}");
-                }
-
-                afspraakButtons[i].onClick.RemoveAllListeners();
-                afspraakButtons[i].onClick.AddListener(() => SelectAfspraak(afspraakId, afspraakTitle, naamDokter, datumTijd));
-                afspraakButtons[i].interactable = true;
-
-                Debug.Log($"Set button {i} with appointment ID {afspraakId}: {afspraakTitle}");
-            }
-        }
-    }
-
-    private void SelectAfspraak(string afspraakId, string afspraakTitle, string naamDokter, string datumTijd)
-    {
-        selectedAfspraakId = afspraakId;
-        selectedAfspraakTitle = afspraakTitle;
-        feedbackText.text = $"✅ Geselecteerde afspraak:\nTitel: {afspraakTitle}\nNaam Dokter: {naamDokter}\nDatum en Tijd: {datumTijd}";
-    }
-
-    public async void DeleteSelectedAfspraak()
-    {
-        IWebRequestReponse response = await afspraakApiClient.DeleteAfspraak(selectedAfspraakId);
-
-        if (response is WebRequestError errorResponse)
-        {
-            feedbackText.text = "❌ Kon afspraak niet verwijderen!";
+            Debug.LogError("❌ WebRequestError: " + error.ErrorMessage);
         }
         else
         {
-            feedbackText.text = "✅ Afspraak verwijderd!";
-            selectedAfspraakId = null;
-            selectedAfspraakTitle = null;
-            LoadAfspraken();
+            Debug.LogWarning("⚠️ Onbekend response type: " + response.GetType());
         }
     }
 
-    public async void DeleteAllAfspraken()
+
+    private void ToonAfspraken()
     {
-        feedbackText.text = "Deleting all appointments...";
-        Debug.Log("Starting delete all appointments...");
+        Debug.Log("📣 ToonAfspraken() aangeroepen met " + huidigeAfspraken.Count + " afspraken.");
 
-        IWebRequestReponse response = await afspraakApiClient.FetchAfspraken();
-
-        if (response is WebRequestError error)
+        for (int i = 0; i < afspraakButtons.Count; i++)
         {
-            feedbackText.text = "❌ Error: " + error.ErrorMessage;
-            Debug.LogError("Failed to fetch appointments: " + error.ErrorMessage);
+            Button button = afspraakButtons[i];
+            button.onClick.RemoveAllListeners(); // reset listeners altijd
+
+            if (i < huidigeAfspraken.Count)
+            {
+                Afspraak afspraak = huidigeAfspraken[i];
+                var id = afspraak.ID;
+
+                TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+                if (buttonText != null)
+                {
+                    buttonText.text = afspraak.Titel;
+                }
+
+                button.interactable = true;
+                button.name = id;
+
+                button.onClick.AddListener(() => SelectAfspraakById(id));
+                Debug.Log($"📌 Knop {i} toegewezen aan afspraak: {afspraak.Titel} (ID: {id})");
+            }
+            else
+            {
+                TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+                if (buttonText != null)
+                {
+                    buttonText.text = "Leeg Afspraak";
+                }
+
+                button.interactable = false;
+                button.name = "leeg";
+            }
+        }
+    }
+    private void SelectAfspraakById(string id)
+    {
+        geselecteerdeAfspraak = huidigeAfspraken.Find(a => a.ID == id);
+
+        if (geselecteerdeAfspraak != null)
+        {
+            titleInput.text = geselecteerdeAfspraak.Titel;
+            doctorInput.text = geselecteerdeAfspraak.NaamDokter;
+            dateInput.text = geselecteerdeAfspraak.DatumTijd;
+            Debug.Log($"✅ Geselecteerde afspraak: {geselecteerdeAfspraak.Titel} (ID: {geselecteerdeAfspraak.ID})");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Geen afspraak gevonden met ID: " + id);
+        }
+    }
+
+
+    private void SelecteerAfspraak(int index)
+    {
+        if (index < 0 || index >= huidigeAfspraken.Count)
+        {
+            Debug.LogWarning("⚠️ Ongeldige afspraak index.");
             return;
         }
 
-        if (response is WebRequestData<string> dataResponse)
+        geselecteerdeIndex = index;
+        Afspraak afspraak = huidigeAfspraken[index];
+
+        titleInput.text = afspraak.Titel;
+        doctorInput.text = afspraak.NaamDokter;
+        dateInput.text = afspraak.DatumTijd;
+
+        Debug.Log($"✅ Geselecteerde afspraak: {afspraak.Titel} (ID: {afspraak.ID})");
+    }
+
+
+    /// <summary>
+    /// Creates a new afspraak by posting to the WebAPI.
+    /// <para>Correct JSON body (do NOT include ID field):</para>
+    /// <code>
+    /// {
+    ///   "Titel": "Doktersafspraak1",
+    ///   "NaamDokter": "Dr. Smith",
+    ///   "DatumTijd": "2025-01-01T00:00:00",
+    ///   "UserId": "user-id",
+    ///   "Actief": 1
+    /// }
+    /// </code>
+    /// <para><b>⚠️ Do NOT include "ID" in the JSON body — even "ID": "" will cause a server error!</b></para>
+    /// </summary>
+    private async void PostAfspraak()
+    {
+        Afspraak nieuweAfspraak = new Afspraak
         {
-            Debug.Log("Raw API response: " + dataResponse.Data);
+            Titel = titleInput.text,
+            NaamDokter = doctorInput.text,
+            DatumTijd = dateInput.text,
+            UserId = "placeholder", // Backend handles actual UserId
+            Actief = 1
+        };
 
-            List<Afspraak> afspraken = JsonHelper.ParseJsonArray<Afspraak>(dataResponse.Data);
-            Debug.Log($"Successfully parsed {afspraken.Count} appointments");
+        string json = JsonUtility.ToJson(nieuweAfspraak);
+        json = RemoveIdFieldFromJson(json); // Extra safety step to strip "ID" if it somehow appears
 
-            foreach (var afspraak in afspraken)
-            {
-                await afspraakApiClient.DeleteAfspraak(afspraak.ID);
-            }
+        var response = await webClient.SendPostRequest("/Afspraak", json);
 
-            feedbackText.text = "✅ All appointments deleted!";
-            LoadAfspraken();
+        if (response is WebRequestData<string>)
+        {
+            Debug.Log("✅ Afspraak opgeslagen.");
+            LaadAfspraken();
+        }
+        else
+        {
+            Debug.LogError("❌ Afspraak kon niet worden opgeslagen.");
         }
     }
-}
 
+    /// <summary>
+    /// Removes the "ID" field from a JSON string, if present.
+    /// This is important because sending an empty or null ID will cause an error on the backend.
+    /// </summary>
+    /// <param name="json">The original JSON string</param>
+    /// <returns>A sanitized JSON string without the ID field</returns>
+    private string RemoveIdFieldFromJson(string json)
+    {
+        return json.Replace("\"ID\":\"\",", "");
+    }
+
+
+    private async void DeleteSelectedAfspraak()
+    {
+        if (geselecteerdeIndex == -1 || geselecteerdeIndex >= huidigeAfspraken.Count)
+        {
+            Debug.LogWarning("⚠️ Geen afspraak geselecteerd.");
+            return;
+        }
+
+        string id = huidigeAfspraken[geselecteerdeIndex].ID;
+        var response = await webClient.SendDeleteRequest("/Afspraak/" + id);
+
+        if (response is WebRequestData<string> || response is WebRequestData<object>)
+        {
+            Debug.Log("🗑️ Afspraak verwijderd.");
+            LaadAfspraken();
+        }
+        else
+        {
+            Debug.LogError("❌ Verwijderen mislukt.");
+        }
+    }
+
+
+    private async void DeleteAlleAfspraken()
+    {
+        foreach (var afspraak in huidigeAfspraken)
+        {
+            await webClient.SendDeleteRequest("/Afspraak/" + afspraak.ID);
+        }
+
+        Debug.Log("🧹 Alle afspraken verwijderd.");
+        LaadAfspraken();
+    }
+}
