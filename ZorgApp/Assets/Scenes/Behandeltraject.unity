@@ -373,6 +373,51 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &37911124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37911126}
+  - component: {fileID: 37911125}
+  m_Layer: 0
+  m_Name: Ophalen traject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &37911125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37911124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab44d1fb4cf946479064a899c8ed52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patientApiClient: {fileID: 316744012}
+--- !u!4 &37911126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37911124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1582.272, y: 62.809578, z: -5.1202316}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &54984088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +1757,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291963701}
   m_CullTransparentMesh: 1
+--- !u!1001 &316744010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 749426263118363324, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_Name
+      value: APIClient
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876851875216425418, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: baseUrl
+      value: https://avansict22257801.azurewebsites.net
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 473.1935
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 142.98772
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.0603759
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046000053383464253, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 749426263118363324, guid: 59679847498dc714793dd788d2f68931, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 316744012}
+  m_SourcePrefab: {fileID: 100100000, guid: 59679847498dc714793dd788d2f68931, type: 3}
+--- !u!1 &316744011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 749426263118363324, guid: 59679847498dc714793dd788d2f68931, type: 3}
+  m_PrefabInstance: {fileID: 316744010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &316744012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316744011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35678d8c97a47e68a3f6a31e3bc5569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webClient: {fileID: 316744013}
+--- !u!114 &316744013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4876851875216425418, guid: 59679847498dc714793dd788d2f68931, type: 3}
+  m_PrefabInstance: {fileID: 316744010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316744011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c86bd7546f1f94e9c106ea19a09157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &331788856
 GameObject:
   m_ObjectHideFlags: 0
@@ -11153,3 +11291,5 @@ SceneRoots:
   - {fileID: 2019005558}
   - {fileID: 1126094798}
   - {fileID: 225090958}
+  - {fileID: 37911126}
+  - {fileID: 316744010}
