@@ -61,6 +61,8 @@ public class AlleKnoppenCode : MonoBehaviour
         // These buttons are ALWAYS unclickable
         foreach (Button button in UnclickableButtons)
         {
+            ColorBlock colors = button.colors;
+            colors.normalColor = Color.white;
             button.interactable = false;
         }
     }
