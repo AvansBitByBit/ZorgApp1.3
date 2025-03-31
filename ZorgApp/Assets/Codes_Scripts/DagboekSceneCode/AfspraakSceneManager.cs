@@ -51,16 +51,16 @@ public class AfspraakManager : MonoBehaviour
         if (response is WebRequestData<string> data)
         {
             Debug.Log("📥 Ontvangen JSON:\n" + data.Data);
+
             huidigeAfspraken = JsonHelper.ParseJsonArray<Afspraak>(data.Data);
+
+            for (int i = 0; i < huidigeAfspraken.Count; i++)
+            {
+                Afspraak a = huidigeAfspraken[i];
+                Debug.Log($"🧾 [{i}] Titel: {a.titel} | Dokter: {a.naamDokter} | Datum: {a.datumTijd} | id: {a.id}");
+            }
+
             ToonAfspraken();
-        }
-        else if (response is WebRequestError error)
-        {
-            Debug.LogError("❌ WebRequestError: " + error.ErrorMessage);
-        }
-        else
-        {
-            Debug.LogWarning("⚠️ Onbekend response type: " + response.GetType());
         }
     }
 
@@ -77,19 +77,19 @@ public class AfspraakManager : MonoBehaviour
             if (i < huidigeAfspraken.Count)
             {
                 Afspraak afspraak = huidigeAfspraken[i];
-                var id = afspraak.ID;
+                var id = afspraak.id;
 
                 TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
                 if (buttonText != null)
                 {
-                    buttonText.text = afspraak.Titel;
+                    buttonText.text = afspraak.titel;
                 }
 
                 button.interactable = true;
                 button.name = id;
 
-                button.onClick.AddListener(() => SelectAfspraakById(id));
-                Debug.Log($"📌 Knop {i} toegewezen aan afspraak: {afspraak.Titel} (ID: {id})");
+                button.onClick.AddListener(() => SelectAfspraakByid(id));
+                Debug.Log($"📌 Knop {i} toegewezen aan afspraak: {afspraak.titel} (id: {id})");
             }
             else
             {
@@ -104,20 +104,20 @@ public class AfspraakManager : MonoBehaviour
             }
         }
     }
-    private void SelectAfspraakById(string id)
+    private void SelectAfspraakByid(string id)
     {
-        geselecteerdeAfspraak = huidigeAfspraken.Find(a => a.ID == id);
+        geselecteerdeAfspraak = huidigeAfspraken.Find(a => a.id == id);
 
         if (geselecteerdeAfspraak != null)
         {
-            titleInput.text = geselecteerdeAfspraak.Titel;
-            doctorInput.text = geselecteerdeAfspraak.NaamDokter;
-            dateInput.text = geselecteerdeAfspraak.DatumTijd;
-            Debug.Log($"✅ Geselecteerde afspraak: {geselecteerdeAfspraak.Titel} (ID: {geselecteerdeAfspraak.ID})");
+            titleInput.text = geselecteerdeAfspraak.titel;
+            doctorInput.text = geselecteerdeAfspraak.naamDokter;
+            dateInput.text = geselecteerdeAfspraak.datumTijd;
+            Debug.Log($"✅ Geselecteerde afspraak: {geselecteerdeAfspraak.titel} (id: {geselecteerdeAfspraak.id})");
         }
         else
         {
-            Debug.LogWarning("⚠️ Geen afspraak gevonden met ID: " + id);
+            Debug.LogWarning("⚠️ Geen afspraak gevonden met id: " + id);
         }
     }
 
@@ -133,41 +133,41 @@ public class AfspraakManager : MonoBehaviour
         geselecteerdeIndex = index;
         Afspraak afspraak = huidigeAfspraken[index];
 
-        titleInput.text = afspraak.Titel;
-        doctorInput.text = afspraak.NaamDokter;
-        dateInput.text = afspraak.DatumTijd;
+        titleInput.text = afspraak.titel;
+        doctorInput.text = afspraak.naamDokter;
+        dateInput.text = afspraak.datumTijd;
 
-        Debug.Log($"✅ Geselecteerde afspraak: {afspraak.Titel} (ID: {afspraak.ID})");
+        Debug.Log($"✅ Geselecteerde afspraak: {afspraak.titel} (id: {afspraak.id})");
     }
 
 
     /// <summary>
     /// Creates a new afspraak by posting to the WebAPI.
-    /// <para>Correct JSON body (do NOT include ID field):</para>
+    /// <para>Correct JSON body (do NOT include id field):</para>
     /// <code>
     /// {
-    ///   "Titel": "Doktersafspraak1",
-    ///   "NaamDokter": "Dr. Smith",
-    ///   "DatumTijd": "2025-01-01T00:00:00",
-    ///   "UserId": "user-id",
-    ///   "Actief": 1
+    ///   "titel": "Doktersafspraak1",
+    ///   "naamDokter": "Dr. Smith",
+    ///   "datumTijd": "2025-01-01T00:00:00",
+    ///   "userid": "user-id",
+    ///   "actief": 1
     /// }
     /// </code>
-    /// <para><b>⚠️ Do NOT include "ID" in the JSON body — even "ID": "" will cause a server error!</b></para>
+    /// <para><b>⚠️ Do NOT include "id" in the JSON body — even "id": "" will cause a server error!</b></para>
     /// </summary>
     private async void PostAfspraak()
     {
         Afspraak nieuweAfspraak = new Afspraak
         {
-            Titel = titleInput.text,
-            NaamDokter = doctorInput.text,
-            DatumTijd = dateInput.text,
-            UserId = "placeholder", // Backend handles actual UserId
-            Actief = 1
+            titel = titleInput.text,
+            naamDokter = doctorInput.text,
+            datumTijd = dateInput.text,
+            userId = "placeholder", // Backend handles actual userid
+            actief = 1
         };
 
         string json = JsonUtility.ToJson(nieuweAfspraak);
-        json = RemoveIdFieldFromJson(json); // Extra safety step to strip "ID" if it somehow appears
+        json = RemoveidFieldFromJson(json); // Extra safety step to strip "id" if it somehow appears
 
         var response = await webClient.SendPostRequest("/Afspraak", json);
 
@@ -183,14 +183,14 @@ public class AfspraakManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Removes the "ID" field from a JSON string, if present.
-    /// This is important because sending an empty or null ID will cause an error on the backend.
+    /// Removes the "id" field from a JSON string, if present.
+    /// This is important because sending an empty or null id will cause an error on the backend.
     /// </summary>
     /// <param name="json">The original JSON string</param>
-    /// <returns>A sanitized JSON string without the ID field</returns>
-    private string RemoveIdFieldFromJson(string json)
+    /// <returns>A sanitized JSON string without the id field</returns>
+    private string RemoveidFieldFromJson(string json)
     {
-        return json.Replace("\"ID\":\"\",", "");
+        return json.Replace("\"id\":\"\",", "");
     }
 
 
@@ -202,7 +202,7 @@ public class AfspraakManager : MonoBehaviour
             return;
         }
 
-        string id = huidigeAfspraken[geselecteerdeIndex].ID;
+        string id = huidigeAfspraken[geselecteerdeIndex].id;
         var response = await webClient.SendDeleteRequest("/Afspraak/" + id);
 
         if (response is WebRequestData<string> || response is WebRequestData<object>)
@@ -221,7 +221,7 @@ public class AfspraakManager : MonoBehaviour
     {
         foreach (var afspraak in huidigeAfspraken)
         {
-            await webClient.SendDeleteRequest("/Afspraak/" + afspraak.ID);
+            await webClient.SendDeleteRequest("/Afspraak/" + afspraak.id);
         }
 
         Debug.Log("🧹 Alle afspraken verwijderd.");

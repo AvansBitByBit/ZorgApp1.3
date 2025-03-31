@@ -1,12 +1,12 @@
 using System;
-
 [Serializable]
 public class Afspraak
 {
-    public string ID;
-    public string Titel;
-    public string NaamDokter;
-    public string DatumTijd;
-    public string UserId;
-    public int Actief;
+    
+    public string id;
+    public string titel;
+    public string naamDokter;
+    public string datumTijd;
+    public string userId;
+    public int actief;
 }

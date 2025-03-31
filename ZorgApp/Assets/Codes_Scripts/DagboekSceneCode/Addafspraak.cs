@@ -25,10 +25,10 @@ public class AddAfspraak : MonoBehaviour
     /// <remarks>
     /// Example JSON body for creating an afspraak:
     /// {
-    ///     "Titel": "Doktersafspraak",
+    ///     "titel": "Doktersafspraak",
     ///     "NaamDokter": "Dr. Smith",
     ///     "DatumTijd": "2025-01-01T00:00:00",
-    ///     "UserId": "user-id",
+    ///     "userId": "user-id",
     ///     "Actief": 1
     /// }
     /// </remarks>
@@ -49,11 +49,11 @@ public class AddAfspraak : MonoBehaviour
 
         Afspraak afspraak = new Afspraak
         {
-            Titel = titel,
-            NaamDokter = naamDokter,
-            DatumTijd = isoDatumTijd,
-            UserId = "user-id", // Replace with actual user ID if available
-            Actief = 1
+            titel = titel,
+            naamDokter = naamDokter,
+            datumTijd = isoDatumTijd,
+            userId = "user-id", // Replace with actual user id if available
+            actief = 1
         };
 
         bool success = await afspraakApiClient.CreateAfspraak(afspraak);
