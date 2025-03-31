@@ -13,8 +13,8 @@ public class QuestionScript : MonoBehaviour
   {
     Debug.Log("Answer 1 clicked");
     Status.text = "Fout! Probeer het opnieuw." +
-                  "" +
-                  "Tip: Wat voor foto wordt er gemaakt?";
+                  "" 
+                  ;
 
   }
 
@@ -30,8 +30,8 @@ public class QuestionScript : MonoBehaviour
   {
     Debug.Log("Answer 3 clicked");
     Status.text = "Fout! Probeer het opnieuw." +
-                  "" +
-                  "Tip: Wat voor foto wordt er gemaakt?";
+                  "" 
+                  ;
   }
 
 
