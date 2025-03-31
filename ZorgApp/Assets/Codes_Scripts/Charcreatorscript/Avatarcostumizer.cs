@@ -1,8 +1,13 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class Avatarcostumizer : MonoBehaviour
 {
+    [Header("Naam")]
+    public TMP_InputField naamInput;
+
     [Header("Haar")]
     public Image haarImage;
     public Sprite[] haarStijlen;
@@ -11,14 +16,14 @@ public class Avatarcostumizer : MonoBehaviour
     private int haarIndex = 0;
 
     [Header("Ogen")]
-    public Image [] oogImages;
+    public Image[] oogImages;
     public Sprite[] oogStijlen;
     public Button oogBtnLinks;
     public Button oogBtnRechts;
     private int oogIndex = 0;
 
     [Header("Huidkleur")]
-    public Image [] huidImages;
+    public Image[] huidImages;
     public Sprite[] huidStijlen;
     public Button huidBtnLinks;
     public Button huidBtnRechts;
@@ -31,25 +36,45 @@ public class Avatarcostumizer : MonoBehaviour
     public Button pakBtnRechts;
     private int pakIndex = 0;
 
+    [Header("Opslaan")]
+    public Button opslaanBtn;
+    public string avatarId = "avatar1"; // Uniek ID voor opslaan
+
     void Start()
     {
-        // Haar
+        // Koppel de knoppen
         haarBtnLinks.onClick.AddListener(() => VeranderHaar(-1));
         haarBtnRechts.onClick.AddListener(() => VeranderHaar(1));
 
-        // Ogen
         oogBtnLinks.onClick.AddListener(() => VeranderOgen(-1));
         oogBtnRechts.onClick.AddListener(() => VeranderOgen(1));
 
-        // Huid
         huidBtnLinks.onClick.AddListener(() => VeranderHuid(-1));
         huidBtnRechts.onClick.AddListener(() => VeranderHuid(1));
 
-        // Pak
         pakBtnLinks.onClick.AddListener(() => VeranderPak(-1));
         pakBtnRechts.onClick.AddListener(() => VeranderPak(1));
 
-        // Startwaarden toepassen
+        opslaanBtn.onClick.AddListener(SlaOp);
+
+        // Laad opgeslagen opties als deze bestaan
+        if (PlayerPrefs.HasKey(avatarId + "_haar"))
+        {
+            haarIndex = PlayerPrefs.GetInt(avatarId + "_haar");
+            oogIndex = PlayerPrefs.GetInt(avatarId + "_ogen");
+            huidIndex = PlayerPrefs.GetInt(avatarId + "_huid");
+            pakIndex = PlayerPrefs.GetInt(avatarId + "_pak");
+        }
+
+        // Laad de naam als deze opgeslagen is
+        if (PlayerPrefs.HasKey(avatarId + "_naam"))
+        {
+            string savedName = PlayerPrefs.GetString(avatarId + "_naam");
+            if (naamInput != null)
+                naamInput.text = savedName;
+        }
+
+        // Pas de startwaarden toe
         UpdateHaar();
         UpdateOgen();
         UpdateHuid();
@@ -80,12 +105,18 @@ public class Avatarcostumizer : MonoBehaviour
         UpdatePak();
     }
 
-    void UpdateHaar() => haarImage.sprite = haarStijlen[haarIndex];
+    void UpdateHaar()
+    {
+        if (haarImage != null && haarStijlen.Length > 0)
+            haarImage.sprite = haarStijlen[haarIndex];
+    }
+
     void UpdateOgen()
     {
         foreach (Image img in oogImages)
         {
-            img.sprite = oogStijlen[oogIndex];
+            if (img != null && oogStijlen.Length > 0)
+                img.sprite = oogStijlen[oogIndex];
         }
     }
 
@@ -93,16 +124,33 @@ public class Avatarcostumizer : MonoBehaviour
     {
         foreach (Image img in huidImages)
         {
-            img.sprite = huidStijlen[huidIndex];
+            if (img != null && huidStijlen.Length > 0)
+                img.sprite = huidStijlen[huidIndex];
         }
     }
-
 
     void UpdatePak()
     {
         foreach (Image img in pakImages)
         {
-            img.sprite = pakStijlen[oogIndex];
+            if (img != null && pakStijlen.Length > 0)
+                img.sprite = pakStijlen[pakIndex];
         }
+    }
+
+    void SlaOp()
+    {
+        PlayerPrefs.SetInt(avatarId + "_haar", haarIndex);
+        PlayerPrefs.SetInt(avatarId + "_ogen", oogIndex);
+        PlayerPrefs.SetInt(avatarId + "_huid", huidIndex);
+        PlayerPrefs.SetInt(avatarId + "_pak", pakIndex);
+
+        if (naamInput != null)
+            PlayerPrefs.SetString(avatarId + "_naam", naamInput.text);
+
+        PlayerPrefs.Save();
+
+        string timestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        Debug.Log("Avatar en naam opgeslagen als: " + avatarId + " op " + timestamp);
     }
 }
