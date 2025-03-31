@@ -196,7 +196,7 @@ MonoBehaviour:
   Answer2: {fileID: 1871727215}
   Answer3: {fileID: 1419226852}
   NextMission: {fileID: 1425720088}
-  Status: {fileID: 1851404513}
+  Status: {fileID: 1799322165}
 --- !u!4 &213122645
 Transform:
   m_ObjectHideFlags: 0
@@ -672,11 +672,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572131988}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6b1d4361164e4694b9189614c99ecff1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b156122a61a53fc479d759dbe77c805a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 9f706d0e27589cb4189c58b573683750, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 2268adeabf0d5034c8f76c18205e259a, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rontgenfoto
+  m_text: Speciale zaag
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
   m_sharedMaterial: {fileID: -5794304836460118084, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 101.21765, y: -2.9769783, z: 0, w: 0}
+  m_margin: {x: 60.825882, y: -2.9769783, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -995,7 +995,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vraag: Wat voor foto word er gemaakt van je bot?'
+  m_text: 'Vraag: Wat word er gebruikt om je gips eraf te halen ?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
   m_sharedMaterial: {fileID: -5794304836460118084, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
@@ -1443,7 +1443,6 @@ Transform:
   - {fileID: 1114647265}
   - {fileID: 1547900184}
   - {fileID: 1950271953}
-  - {fileID: 1851404515}
   m_Father: {fileID: 1791772408}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1114647262
@@ -1582,7 +1581,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Botfoto
+  m_text: Hamer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
   m_sharedMaterial: {fileID: -5794304836460118084, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
@@ -1718,7 +1717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Niks
+  m_text: Koevoet
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
   m_sharedMaterial: {fileID: -5794304836460118084, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
@@ -1783,7 +1782,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 139.91882, y: 0, z: 0, w: 0}
+  m_margin: {x: 78.75416, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2022,7 +2021,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: M2_Benen
+          m_StringArgument: PersonelijkeMissie
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1425720091
@@ -2253,7 +2252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 9f706d0e27589cb4189c58b573683750, type: 2}
+  m_Texture: {fileID: 8400000, guid: 2268adeabf0d5034c8f76c18205e259a, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2507,6 +2506,7 @@ RectTransform:
   - {fileID: 1902189419}
   - {fileID: 1425720089}
   - {fileID: 1071251272}
+  - {fileID: 1799322164}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2514,7 +2514,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1851404512
+--- !u!1 &1799322163
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2522,9 +2522,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1851404515}
-  - component: {fileID: 1851404514}
-  - component: {fileID: 1851404513}
+  - component: {fileID: 1799322164}
+  - component: {fileID: 1799322166}
+  - component: {fileID: 1799322165}
   m_Layer: 0
   m_Name: Feedback
   m_TagString: Untagged
@@ -2532,13 +2532,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1851404513
+--- !u!224 &1799322164
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799322163}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.72205293, y: 0.72205293, z: 0.72205293}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1791772408}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 160.23132, y: 13.630051}
+  m_SizeDelta: {x: 181.0334, y: 50}
+  m_Pivot: {x: 0.5000001, y: 0.5}
+--- !u!114 &1799322165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851404512}
+  m_GameObject: {fileID: 1799322163}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -2623,33 +2642,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1851404514
+--- !u!222 &1799322166
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851404512}
+  m_GameObject: {fileID: 1799322163}
   m_CullTransparentMesh: 1
---- !u!224 &1851404515
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851404512}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1071251272}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190.48338, y: 212.99998}
-  m_SizeDelta: {x: 181.0334, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1871727215
 GameObject:
   m_ObjectHideFlags: 0

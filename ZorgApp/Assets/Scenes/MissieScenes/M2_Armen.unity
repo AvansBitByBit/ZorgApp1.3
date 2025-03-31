@@ -1100,8 +1100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.6831627, y: -6.81979}
-  m_SizeDelta: {x: -11.3664, y: 13.6396}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0}
+  m_SizeDelta: {x: -34.5798, y: -20.9402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696207137
 MonoBehaviour:
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Volgende Missie
+  m_text: Je bent klaar met Missie 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
   m_sharedMaterial: {fileID: -5794304836460118084, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
@@ -1132,8 +1132,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 12.957518}
+  m_margin: {x: 0, y: 0, z: 0, w: 0.7994976}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2103,8 +2103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.47100002}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342.73264, y: -126.60679}
-  m_SizeDelta: {x: 114.5347, y: 67.0582}
+  m_AnchoredPosition: {x: 332.56, y: -112.5986}
+  m_SizeDelta: {x: 134.88, y: 95.0745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425720090
 MonoBehaviour:
@@ -2159,7 +2159,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Armbreuk2
+          m_StringArgument: Behandeltraject
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1425720091

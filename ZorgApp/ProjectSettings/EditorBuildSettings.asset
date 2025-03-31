@@ -21,16 +21,16 @@ EditorBuildSettings:
     path: Assets/Scenes/MissieScenes/M3_Armen.unity
     guid: 66a6d12a3a0a6f74aad789f244a61045
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/M1_Ribben.unity
+    path: Assets/Scenes/MissieScenes/M2_Ribben.unity
     guid: 4d06992db61e3004bb09b18ef18fe257
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/M2_Ribben.unity
+    path: Assets/Scenes/MissieScenes/M3_Ribben.unity
     guid: 48c587acb5a88c342b7d54a9176a892e
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/M1_Benen.unity
+    path: Assets/Scenes/MissieScenes/M2_Benen.unity
     guid: c6c8aade90f359b47a8985ee362e999c
   - enabled: 1
-    path: Assets/Scenes/MissieScenes/M2_Benen.unity
+    path: Assets/Scenes/MissieScenes/M3_Benen.unity
     guid: 2ad1052ac1783f946826619621e7eb72
   - enabled: 1
     path: Assets/Scenes/MissieScenes/PersonelijkeMissie.unity
