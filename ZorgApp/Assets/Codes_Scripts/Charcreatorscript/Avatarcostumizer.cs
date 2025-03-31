@@ -151,6 +151,6 @@ public class Avatarcostumizer : MonoBehaviour
         PlayerPrefs.Save();
 
         string timestamp = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-        Debug.Log("Avatar en naam opgeslagen als: " + avatarId + " op " + timestamp);
+        Debug.Log("✅ Avatar en naam opgeslagen als: " + avatarId + " met naam: " + naamInput.text + " op " + timestamp);
     }
 }
