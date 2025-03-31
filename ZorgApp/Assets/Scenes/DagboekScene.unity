@@ -525,7 +525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &234957227
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5753,16 +5753,6 @@ MonoBehaviour:
   deleteButton: {fileID: 1038416151}
   deleteAllButton: {fileID: 631328306}
   saveButton: {fileID: 1956761806}
-  afspraakTexts:
-  - {fileID: 1960782049}
-  - {fileID: 411955467}
-  - {fileID: 714171063}
-  - {fileID: 1959982537}
-  - {fileID: 384345434}
-  - {fileID: 1488702965}
-  - {fileID: 1724179566}
-  - {fileID: 1575883283}
-  - {fileID: 2135524216}
   titleInput: {fileID: 512114780}
   doctorInput: {fileID: 1090595411}
   dateInput: {fileID: 777857532}
