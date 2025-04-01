@@ -9,6 +9,7 @@ public class KindGegevensInvoeren : MonoBehaviour
     public Button saveButton;
     public TMPro.TMP_InputField nameInputField;
     public TMPro.TMP_InputField lastnameInputField;
+    public TMPro.TMP_InputField geboortedatumInputField;
     public Button ArmLinks;
     public Button ArmRechts;
     public Button BeenLinks;
@@ -58,12 +59,15 @@ public class KindGegevensInvoeren : MonoBehaviour
     {
         string name = nameInputField.text;
         string lastname = lastnameInputField.text;
+        string geboortedatum = geboortedatumInputField.text;
 
         Patient patient = new Patient
         {
             voornaam = name,
             achternaam = lastname,
+            geboortedatum = geboortedatum,
             trajectID = Traject
+
         };
 
         string jsonData = JsonUtility.ToJson(patient);
