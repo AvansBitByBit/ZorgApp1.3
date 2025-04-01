@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using ApiClient.ModelApiClients;
 using ApiClient.Models;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class KindGegevensInvoeren : MonoBehaviour
@@ -78,10 +79,16 @@ public class KindGegevensInvoeren : MonoBehaviour
         if (response is WebRequestData<string> data)
         {
             Debug.Log("Patient created successfully: " + data.Data);
+            Succes();
         }
         else
         {
             Debug.LogError("Failed to create Patient: " + response);
         }
+    }
+
+    public void Succes()
+    {
+        SceneManager.LoadScene("Charactercreator");
     }
 }
