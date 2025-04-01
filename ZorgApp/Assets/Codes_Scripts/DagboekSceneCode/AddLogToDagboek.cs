@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class AddLogToDagboek : MonoBehaviour
 {
@@ -28,9 +29,13 @@ public class AddLogToDagboek : MonoBehaviour
     {
         string title = titleInputField.text;
         string contents = contentsInputField.text;
+        Random random = new Random();
+        int randomId = random.Next(0, 2147483647);
 
         Dagboek dagboek = new Dagboek
         {
+
+            id = randomId,
             title = title,
             contents = contents,
             date = DateTime.Now.ToString("yyyy-MM-dd"),

@@ -25,6 +25,7 @@ public class AfspraakManager : MonoBehaviour
 
     private List<Afspraak> huidigeAfspraken = new();
     private Afspraak geselecteerdeAfspraak;
+    public string AfspraakId;
 
     private void Start()
     {
@@ -114,6 +115,8 @@ public class AfspraakManager : MonoBehaviour
             doctorInput.text = geselecteerdeAfspraak.naamDokter;
             dateInput.text = geselecteerdeAfspraak.datumTijd;
             Debug.Log($"✅ Geselecteerde afspraak: {geselecteerdeAfspraak.titel} (id: {geselecteerdeAfspraak.id})");
+            // logica voor het selecteren van een afspraak die slaat id op in een variabele
+            AfspraakId = id;
         }
         else
         {
@@ -196,14 +199,9 @@ public class AfspraakManager : MonoBehaviour
 
     private async void DeleteSelectedAfspraak()
     {
-        if (geselecteerdeIndex == -1 || geselecteerdeIndex >= huidigeAfspraken.Count)
-        {
-            Debug.LogWarning("⚠️ Geen afspraak geselecteerd.");
-            return;
-        }
 
-        string id = huidigeAfspraken[geselecteerdeIndex].id;
-        var response = await webClient.SendDeleteRequest("/Afspraak/" + id);
+
+        var response = await webClient.SendDeleteRequest("/Afspraak/" + geselecteerdeAfspraak.id);
 
         if (response is WebRequestData<string> || response is WebRequestData<object>)
         {
