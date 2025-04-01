@@ -110,12 +110,18 @@ public class DagboekSceneManager : MonoBehaviour
         }
     }
 
-    private void DeleteSelectedDagboek()
+    private async void DeleteSelectedDagboek()
     {
-        if (geselecteerdeDagboek == null)
+
+        var response = await webClient.SendDeleteRequest("/dagboek/" + geselecteerdeDagboek.id);
+        if (response is WebRequestData<string> || response is WebRequestData<object>)
         {
-            Debug.LogWarning("🚫 Geen dagboek geselecteerd om te verwijderen.");
-            return;
+            Debug.Log("🗑️ Afspraak verwijderd.");
+            LaadDagboeken();
+        }
+        else
+        {
+            Debug.LogError("❌ Verwijderen mislukt.");
         }
 
     }

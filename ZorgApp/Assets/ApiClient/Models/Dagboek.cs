@@ -15,3 +15,4 @@ public class Dagboek
 }
 
 //{"id":0,"title":"rff","contents":"rfr","date":"","userId":"cee55173-8a7b-4fa1-bdd4-8b419b42aa52"},{"id":0,"title":"nieuwe","contents":"samenvattig","date":"2025-03-25","userId":"cee55173-8a7b-4fa1-bdd4-8b419b42aa52"},
+//"id":0,"title":"mijn emo verhaale","contents":"barcode","userId":"cee55173-8a7b-4fa1-bdd4-8b419b42aa52"},{"id":0,"title":"gfdgdf","contents":"gdfgdfgdf","userId":"cee55173-8a7b-4fa1-bdd4-8b419b42aa52"}]
