@@ -827,7 +827,7 @@ MonoBehaviour:
   saveButton: {fileID: 1952117484}
   nameInputField: {fileID: 1244758817}
   lastnameInputField: {fileID: 1368930118}
-  geboortedatumInputField: {fileID: 0}
+  geboortedatumInputField: {fileID: 196656045}
   ArmLinks: {fileID: 2055389325}
   ArmRechts: {fileID: 1545189837}
   BeenLinks: {fileID: 1404228465}
