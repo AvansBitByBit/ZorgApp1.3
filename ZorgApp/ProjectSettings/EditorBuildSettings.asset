@@ -68,6 +68,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Charactercreator.unity
     guid: 7e1c0ad1c73f5cf4c8206dea07d5ebfd
+  - enabled: 1
+    path: Assets/Scenes/MissieScenes/Eindscreen.unity
+    guid: bb5c3cb85a4399a4d8cd87e4d3c47c49
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0
