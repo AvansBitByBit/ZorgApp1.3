@@ -1010,7 +1010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.763687, y: -22}
+  m_AnchoredPosition: {x: -10.763657, y: -22}
   m_SizeDelta: {x: 111.2693, y: -294.0605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261699969
@@ -1293,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61.935486, y: 181.2}
+  m_AnchoredPosition: {x: 0.0000036377, y: 181.2}
   m_SizeDelta: {x: 37.0941, y: 38.0181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367008402
@@ -3202,7 +3202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.764053, y: 155.78003}
+  m_AnchoredPosition: {x: -10.764023, y: 155.78003}
   m_SizeDelta: {x: 111.27, y: -311.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &816892359
@@ -4186,7 +4186,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: enlargeOnHoverButtons.Array.size
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: 'enlargeOnHoverButtons.Array.data[0]'
@@ -4256,6 +4256,10 @@ PrefabInstance:
       propertyPath: 'enlargeOnHoverButtons.Array.data[16]'
       value: 
       objectReference: {fileID: 256196381}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[17]'
+      value: 
+      objectReference: {fileID: 1651244644}
     - target: {fileID: 6829712156289545224, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: m_Name
       value: ButtonManager
@@ -6516,8 +6520,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000005722046}
+  m_SizeDelta: {x: 0, y: 12.4688}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519863518
 MonoBehaviour:
@@ -6539,7 +6543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Account Gegevens
+  m_text: Patient Aanmaken/Updaten
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
   m_sharedMaterial: {fileID: -5794304836460118084, guid: 25e9122bf5daf034787e99d85a894c76, type: 2}
