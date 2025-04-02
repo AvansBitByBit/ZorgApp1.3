@@ -5957,7 +5957,7 @@ PrefabInstance:
       objectReference: {fileID: 88596852}
     - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: enlargeOnHoverButtons.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: 'enlargeOnHoverButtons.Array.data[0]'
@@ -5983,6 +5983,22 @@ PrefabInstance:
       propertyPath: 'enlargeOnHoverButtons.Array.data[5]'
       value: 
       objectReference: {fileID: 949206265}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1354456956}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1261191666}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[8]'
+      value: 
+      objectReference: {fileID: 420357423}
+    - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
+      propertyPath: 'enlargeOnHoverButtons.Array.data[9]'
+      value: 
+      objectReference: {fileID: 2109853457}
     - target: {fileID: 6829712156289545224, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: m_Name
       value: ButtonManager

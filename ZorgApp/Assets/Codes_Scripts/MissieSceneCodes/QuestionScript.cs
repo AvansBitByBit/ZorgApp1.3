@@ -9,32 +9,22 @@ public class QuestionScript : MonoBehaviour
     public GameObject NextMission;
     public TMP_Text Status;
 
-    // Koppel hier je Particle System via Inspector
-    public ParticleSystem confettiEffect;
-
     public void OnAnswer1Clicked()
     {
+        Debug.Log("Answer 1 clicked");
         Status.text = "Fout! Probeer het opnieuw.";
     }
 
     public void OnAnswer2Clicked()
     {
+        Debug.Log("Answer 2 clicked");
         Status.text = "Goed gedaan!";
         NextMission.SetActive(true);
-
-        // Activeer hier de particle animatie
-        if (confettiEffect != null)
-        {
-            confettiEffect.Play();
-        }
-        else
-        {
-            Debug.LogError("Confetti Particle System is niet gekoppeld in de Inspector!");
-        }
     }
 
     public void OnAnswer3Clicked()
     {
+        Debug.Log("Answer 3 clicked");
         Status.text = "Fout! Probeer het opnieuw.";
     }
 }
