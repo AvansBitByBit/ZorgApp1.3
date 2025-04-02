@@ -197,6 +197,7 @@ MonoBehaviour:
   Answer3: {fileID: 1419226852}
   NextMission: {fileID: 1425720088}
   Status: {fileID: 1851404513}
+  confettiEffect: {fileID: 0}
 --- !u!4 &213122645
 Transform:
   m_ObjectHideFlags: 0
@@ -2022,7 +2023,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: M2_Armen
+          m_StringArgument: M2_Ribben
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1425720091
