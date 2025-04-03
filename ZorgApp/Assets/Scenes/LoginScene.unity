@@ -5957,7 +5957,7 @@ PrefabInstance:
       objectReference: {fileID: 88596852}
     - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: enlargeOnHoverButtons.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3534755870842025441, guid: a37e4096ed048f741aad2d41e7c61122, type: 3}
       propertyPath: 'enlargeOnHoverButtons.Array.data[0]'
