@@ -24,15 +24,15 @@ public class RaketAnimatieManager : MonoBehaviour
 
     public void Start()
     {
-        PlaneetArm1.onClick.AddListener(() => OnPlanetButtonClicked(1, "Arm"));
-        PlaneetArm2.onClick.AddListener(() => OnPlanetButtonClicked(2, "Arm"));
-        PlaneetArm3.onClick.AddListener(() => OnPlanetButtonClicked(3, "Arm"));
-        PlaneetBeen1.onClick.AddListener(() => OnPlanetButtonClicked(1, "Been"));
-        PlaneetBeen2.onClick.AddListener(() => OnPlanetButtonClicked(2, "Been"));
-        PlaneetBeen3.onClick.AddListener(() => OnPlanetButtonClicked(3, "Been"));
-        PlaneetRib1.onClick.AddListener(() => OnPlanetButtonClicked(1, "Rib"));
-        PlaneetRib2.onClick.AddListener(() => OnPlanetButtonClicked(2, "Rib"));
-        PlaneetRib3.onClick.AddListener(() => OnPlanetButtonClicked(3, "Rib"));
+        PlaneetArm1?.onClick.AddListener(() => OnPlanetButtonClicked(1, "Arm"));
+        PlaneetArm2?.onClick.AddListener(() => OnPlanetButtonClicked(2, "Arm"));
+        PlaneetArm3?.onClick.AddListener(() => OnPlanetButtonClicked(3, "Arm"));
+        PlaneetBeen1?.onClick.AddListener(() => OnPlanetButtonClicked(1, "Been"));
+        PlaneetBeen2?.onClick.AddListener(() => OnPlanetButtonClicked(2, "Been"));
+        PlaneetBeen3?.onClick.AddListener(() => OnPlanetButtonClicked(3, "Been"));
+        PlaneetRib1?.onClick.AddListener(() => OnPlanetButtonClicked(1, "Rib"));
+        PlaneetRib2?.onClick.AddListener(() => OnPlanetButtonClicked(2, "Rib"));
+        PlaneetRib3?.onClick.AddListener(() => OnPlanetButtonClicked(3, "Rib"));
     }
 
     private void OnPlanetButtonClicked(int planetNumber, string bodyPart)
@@ -60,7 +60,10 @@ public class RaketAnimatieManager : MonoBehaviour
 
     private IEnumerator LoadSceneAfterAnimation(string sceneName)
     {
-        yield return new WaitForSeconds(1f); // Adjust the wait time based on your animation length
+        AnimatorStateInfo animationState = raketAnimatie.GetCurrentAnimatorStateInfo(0);
+        float animationLength = animationState.length+0.5f;
+
+        yield return new WaitForSeconds(animationLength);
         SceneManager.LoadScene(sceneName);
     }
 }
