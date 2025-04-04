@@ -51,11 +51,11 @@ public class RaketAnimatieManager : MonoBehaviour
         yield return null; // Wait one frame to let animator update
 
         var state = raketAnimatie.GetCurrentAnimatorStateInfo(0);
-        float animationLength = state.length;
+        float animationLength = state.length+0.5f;
 
         Debug.Log($"Playing animation: {state.fullPathHash} | Length: {animationLength}");
 
-        yield return new WaitForSeconds(animationLength + 0.2f);
+        yield return new WaitForSeconds(animationLength + 0.5f);
         SceneManager.LoadScene(sceneName);
     }
 }
