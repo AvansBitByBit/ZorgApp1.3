@@ -22,6 +22,7 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(scenename);
     }
+    
     private IEnumerator LoadSceneAfterAnimation(string sceneName)
     {
         // Wait for the animation to finish

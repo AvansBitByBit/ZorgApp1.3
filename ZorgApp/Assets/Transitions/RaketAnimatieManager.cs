@@ -1,69 +1,69 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 
 public class RaketAnimatieManager : MonoBehaviour
 {
-    [CanBeNull] public Button PlaneetArm1,
-        PlaneetArm2,
-        PlaneetArm3,
-        PlaneetBeen1,
-        PlaneetBeen2,
-        PlaneetBeen3,
-        PlaneetRib1,
-        PlaneetRib2,
-        PlaneetRib3;
     public Animator raketAnimatie;
-    private bool isPlanet3Pressed = false;
+    public List<PlanetButtonInfo> planetButtons;
 
-    public void Start()
+    private int lastPlanetNumber = -1;
+    private string lastBodyPart = "";
+
+    private void Start()
     {
-        PlaneetArm1?.onClick.AddListener(() => OnPlanetButtonClicked(1, "Arm"));
-        PlaneetArm2?.onClick.AddListener(() => OnPlanetButtonClicked(2, "Arm"));
-        PlaneetArm3?.onClick.AddListener(() => OnPlanetButtonClicked(3, "Arm"));
-        PlaneetBeen1?.onClick.AddListener(() => OnPlanetButtonClicked(1, "Been"));
-        PlaneetBeen2?.onClick.AddListener(() => OnPlanetButtonClicked(2, "Been"));
-        PlaneetBeen3?.onClick.AddListener(() => OnPlanetButtonClicked(3, "Been"));
-        PlaneetRib1?.onClick.AddListener(() => OnPlanetButtonClicked(1, "Rib"));
-        PlaneetRib2?.onClick.AddListener(() => OnPlanetButtonClicked(2, "Rib"));
-        PlaneetRib3?.onClick.AddListener(() => OnPlanetButtonClicked(3, "Rib"));
+        foreach (var planet in planetButtons)
+        {
+            planet.button.onClick.AddListener(() => OnPlanetClicked(planet));
+        }
     }
 
-    private void OnPlanetButtonClicked(int planetNumber, string bodyPart)
+    private void OnPlanetClicked(PlanetButtonInfo planet)
     {
-        if (planetNumber == 3)
+        string triggerToSet;
+
+        // Special case: Arm1 -> Arm3 = "ToArm3.1"
+        if (lastBodyPart == "Arm" && lastPlanetNumber == 1 && planet.bodyPart == "Arm" && planet.planetNumber == 3)
         {
-            raketAnimatie.SetTrigger($"Planeet{planetNumber}{bodyPart}Clicked");
-            isPlanet3Pressed = true;
+            triggerToSet = "ToArm3.1";
         }
         else
         {
-            if (isPlanet3Pressed)
-            {
-                raketAnimatie.SetTrigger("Planet3ToPlanet1");
-                isPlanet3Pressed = false;
-            }
-            else
-            {
-                raketAnimatie.SetTrigger($"Start{bodyPart}");
-            }
+            triggerToSet = $"To{planet.bodyPart}{planet.planetNumber}";
         }
 
-        StartCoroutine(LoadSceneAfterAnimation($"M{planetNumber}_{bodyPart}en"));
+        Debug.Log($"Trigger: {triggerToSet}");
+        raketAnimatie.SetTrigger(triggerToSet);
+
+        // Update last clicked info
+        lastPlanetNumber = planet.planetNumber;
+        lastBodyPart = planet.bodyPart;
+
+        // Start coroutine to load scene
+        StartCoroutine(LoadSceneAfterAnimation($"M{planet.planetNumber}_{planet.bodyPart}en"));
     }
 
     private IEnumerator LoadSceneAfterAnimation(string sceneName)
     {
-        AnimatorStateInfo animationState = raketAnimatie.GetCurrentAnimatorStateInfo(0);
-        float animationLength = animationState.length+0.5f;
+        yield return null; // Wait one frame to let animator update
 
-        yield return new WaitForSeconds(animationLength);
+        var state = raketAnimatie.GetCurrentAnimatorStateInfo(0);
+        float animationLength = state.length;
+
+        Debug.Log($"Playing animation: {state.fullPathHash} | Length: {animationLength}");
+
+        yield return new WaitForSeconds(animationLength + 0.2f);
         SceneManager.LoadScene(sceneName);
     }
+}
+
+[System.Serializable]
+public class PlanetButtonInfo
+{
+    public Button button;
+    public string bodyPart;     // e.g. "Arm", "Been", "Rib"
+    public int planetNumber;    // e.g. 1, 2, 3
 }
