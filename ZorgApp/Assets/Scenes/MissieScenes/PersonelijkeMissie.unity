@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25eff689e2059cb419d6a44da3fe339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 980480452}
 --- !u!4 &42529696
 Transform:
   m_ObjectHideFlags: 0
@@ -247,7 +248,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 42529695}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -255,18 +256,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: M2_Armen
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11500000, guid: 25eff689e2059cb419d6a44da3fe339e, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &295548072
@@ -511,7 +500,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 42529695}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1070,7 +1059,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 42529695}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1238,6 +1227,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966315708}
   m_CullTransparentMesh: 1
+--- !u!1001 &980480451
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1791772408}
+    m_Modifications:
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.746233
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -257.9262
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6218482
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701891573765771604, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_Name
+      value: AnimationPrefabSwitcher
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6246566123582027365, guid: 98868624ab891704f8551213d9e78950, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98868624ab891704f8551213d9e78950, type: 3}
+--- !u!95 &980480452 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9103801218804061892, guid: 98868624ab891704f8551213d9e78950, type: 3}
+  m_PrefabInstance: {fileID: 980480451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &980480453 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+  m_PrefabInstance: {fileID: 980480451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1117255301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1454,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 42529695}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1615,7 +1672,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 42529695}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1881,6 +1938,7 @@ RectTransform:
   - {fileID: 1257646086}
   - {fileID: 1805555854}
   - {fileID: 1434338588}
+  - {fileID: 980480453}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2195,6 +2253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25eff689e2059cb419d6a44da3fe339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 0}
 --- !u!114 &2107551475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,7 +2300,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 42529695}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25eff689e2059cb419d6a44da3fe339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 613449271}
 --- !u!4 &50754441
 Transform:
   m_ObjectHideFlags: 0
@@ -700,6 +701,73 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!1001 &613449269
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1791772408}
+    m_Modifications:
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.746233
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -257.9262
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6218482
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701891573765771604, guid: 98868624ab891704f8551213d9e78950, type: 3}
+      propertyPath: m_Name
+      value: AnimationPrefabSwitcher
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98868624ab891704f8551213d9e78950, type: 3}
+--- !u!4 &613449270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3015287254366541257, guid: 98868624ab891704f8551213d9e78950, type: 3}
+  m_PrefabInstance: {fileID: 613449269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &613449271 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9103801218804061892, guid: 98868624ab891704f8551213d9e78950, type: 3}
+  m_PrefabInstance: {fileID: 613449269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &621822377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,7 +2082,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 50754440}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2507,6 +2575,7 @@ RectTransform:
   - {fileID: 1425720089}
   - {fileID: 1071251272}
   - {fileID: 1799322164}
+  - {fileID: 613449270}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2868,7 +2937,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 50754440}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: StartAnimationToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
